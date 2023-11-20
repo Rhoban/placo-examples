@@ -28,10 +28,6 @@ def loop():
     # Showing effector frame
     robot_frame_viz(robot, "effector")
 
-    # Getting effector frame
-    T_world_effector = robot.get_T_world_frame("effector")
-    print(f"Effector position: {T_world_effector[:3, 3]}")
-
     # Updating the viewer
     viz.display(robot.state.q)
 
