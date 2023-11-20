@@ -4,7 +4,7 @@ from ischedule import schedule, run_loop
 import numpy as np
 
 """
-Visualizes a point moving on a circle of radius 0.25m
+Visualizes custom frames
 """
 
 t = 0
