@@ -22,9 +22,15 @@ def loop():
     robot.set_joint('r1', np.sin(t))
     robot.set_joint('r2', np.sin(t/3))
 
-    # Showing effector frame
+    # Updating kinematics
     robot.update_kinematics()
+
+    # Showing effector frame
     robot_frame_viz(robot, "effector")
+
+    # Getting effector frame
+    T_world_effector = robot.get_T_world_frame("effector")
+    print(f"Effector position: {T_world_effector[:3, 3]}")
 
     # Updating the viewer
     viz.display(robot.state.q)
