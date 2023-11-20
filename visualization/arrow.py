@@ -1,4 +1,4 @@
-from placo_utils.visualization import arrow_viz, get_viewer
+from placo_utils.visualization import arrow_viz
 from ischedule import schedule, run_loop
 import numpy as np
 
