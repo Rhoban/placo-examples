@@ -11,26 +11,31 @@ robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
 solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)
 effector_task = solver.add_frame_task("effector", np.eye(4))
-effector_task.configure("effector", "soft", 10., 1.)
+effector_task.configure("effector", "soft", 10.0, 1.0)
 
 # Enable velocity limits
 solver.enable_velocity_limits(True)
 
 viz = robot_viz(robot)
 
-def compute_target():
+
+def update_target():
+    global effector_task
+
     # Choose a random target
     r = pin.exp6(np.array([0.0, 0.0, 0.0, *np.random.uniform([-1.0] * 3, [1.0] * 3)]))
     t = pin.exp6(
         np.array([*np.random.uniform([1.0, -1.0, 0.5], [1.5, 1.0, 1.2]), 0.0, 0.0, 0.0])
     )
-    return t * r
+
+    effector_task.T_world_frame = np.array(t * r)
 
 
 t = 0
+last_target = 0
 dt = 0.01
 solver.dt = dt
-last_target = None
+update_target()
 
 
 @schedule(interval=dt)
@@ -38,10 +43,10 @@ def loop():
     global t, last_target
     t += dt
 
-    if last_target is None or t > last_target + 3:
-        # Choose a new target
+    if t > last_target + 3:
+        # Updating the target every 3 seconds
         last_target = t
-        effector_task.T_world_frame = np.array(compute_target())
+        update_target()
 
     # Solving the IK
     robot.update_kinematics()
