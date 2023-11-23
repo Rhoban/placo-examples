@@ -2,14 +2,14 @@
 
 ## 6axis
 
-![6axis](6axis/robot.png)
+<img src="6axis/robot.png" width="200">
 
 * **Description**: IRB6620 6-axis industrial robot
 * **Joints**:
     * `r1`, `r2`, `r3`, `r4`, `r5`, `r6`
 * **Frames**:
     * `effector`: effector frame
-    
+
 ## Megabot
 
 ## Omnidirectional
