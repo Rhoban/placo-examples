@@ -68,11 +68,18 @@
 
 ## Quadruped
 
-This is a simple quadruped robot with 12 DOFs. The dofs are named `leg1_a`, `leg1_b`, `leg1_c` and so
-on for the three other legs.
+<img src="quadruped/robot.png" width="300">
 
-There is a frame named `trunk` attached to the body, and one frame per leg tip (`leg1` etc.).
-
+* **Description**: 12 DoF Quadruped robot
+* **Joints**
+    * **Actuated** Revolute joints (12)
+        * `leg1_a`, `leg1_b`, `leg1_c`
+        * `leg2_a`, `leg2_b`, `leg2_c`
+        * `leg3_a`, `leg3_b`, `leg3_c`
+        * `leg4_a`, `leg4_b`, `leg4_c`
+* **Frames**:
+    * `trunk`: body frame
+    * `leg1`, `leg2`, `leg3`, `leg4`: leg tips
 
 ## Sigmaban
 
