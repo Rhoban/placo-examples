@@ -52,6 +52,20 @@
 
 ## Orbita
 
+<img src="orbita/robot.png" width="300">
+
+* **Description**: Orbita 3-axis orientational parallel robot
+* **Joints**
+    * **Actuated** Revolute joints (3)
+        * `ring1`, `ring2`, `ring3`
+    * **Passive** Revolute joints (4)
+        * `ring1_br1`, `ring1_br2`, `ring2_br1`, `ring3_br1`
+* **Frames**:
+    * `effector`: effector frame
+    * Closure constraint frames (4)
+        * `closing_ring2_br2_1`, `closing_ring2_br2_2`
+        * `closing_ring3_br2_1`, `closing_ring3_br2_2`
+
 ## Quadruped
 
 This is a simple quadruped robot with 12 DOFs. The dofs are named `leg1_a`, `leg1_b`, `leg1_c` and so
