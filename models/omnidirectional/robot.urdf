@@ -799,7 +799,7 @@
 <joint_properties friction="0.0"/>
 </joint>
 
-<joint name="wheel1_speed" type="revolute">
+<joint name="wheel_1" type="revolute">
 <origin xyz="0.069282032302755147679 -0.039999999999999986955 0.012999999999999999403" rpy="-1.570796326794896558 -0 1.0471975511965980754" />
 <parent link="body" />
 <child link="wheel" />
@@ -1511,7 +1511,7 @@
 <joint_properties friction="0.0"/>
 </joint>
 
-<joint name="wheel3_speed" type="revolute">
+<joint name="wheel_3" type="revolute">
 <origin xyz="-0.069282032302755092168 -0.040000000000000063283 0.012999999999999999403" rpy="1.570796326794896558 -0 2.0943951023931961508" />
 <parent link="body" />
 <child link="wheel_2" />
@@ -2223,7 +2223,7 @@
 <joint_properties friction="0.0"/>
 </joint>
 
-<joint name="wheel2_speed" type="revolute">
+<joint name="wheel_2" type="revolute">
 <origin xyz="-6.5919492087118669588e-17 0.080000000000000182077 0.013000000000000034098" rpy="1.570796326794896558 -0 6.1062266354383451951e-16" />
 <parent link="body" />
 <child link="wheel_3" />
