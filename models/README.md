@@ -6,7 +6,8 @@
 
 * **Description**: IRB6620 6-axis industrial robot
 * **Joints**:
-    * `r1`, `r2`, `r3`, `r4`, `r5`, `r6`
+    * **Actuated**: Revolute joints (6)
+        * `j1`, `j2`, `j3`, `j4`, `j5`, `j6`
 * **Frames**:
     * `effector`: effector frame
 
@@ -83,9 +84,17 @@
 
 ## Sigmaban
 
-This is a model of the Sigmaban humanoid robot. There are 20 DOFs.
+<img src="sigmaban/robot.png" width="300">
 
-The robot is entirely pure-shape approximated for collisions geometry.
-
-There is a frame `trunk` located un the trunk, `left_foot` and `right_foot`.
-
+* **Description**: Sigmaban humanoid robot (20 DoF)
+* **Joints**
+    * **Actuated** Revolute joints (20)
+        * `left_hip_yaw`, `left_hip_roll`, `left_hip_pitch`, `left_knee`, `left_ankle_pitch`, `left_ankle_roll`
+        * `right_hip_yaw`, `right_hip_roll`, `right_hip_pitch`, `right_knee`, `right_ankle_pitch`, `right_ankle_roll`
+        * `left_shoulder_pitch`, `left_shoulder_roll`, `left_elbow`
+        * `right_shoulder_pitch`, `right_shoulder_roll`, `right_elbow`
+        * `head_yaw`, `head_pitch`
+* **Frames**:
+    * `trunk`: body frame
+    * `left_foot`, `right_foot`: foot tips
+    * `camera`: camera frame
