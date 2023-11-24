@@ -43,7 +43,7 @@
 * **Description**: Omnidirectional mobile robot
 * **Joints**
     * **Actuated**: Revolute joints (3)
-        * `wheel_1`, `wheel_2`, `wheel_3`
+        * `wheel1`, `wheel2`, `wheel3`
     * **Passive**: Bearings (20 per wheel)
         * `w1_1_passive`, `w1_2_passive`, `w1_3_passive`, `w1_4_passive`, `w1_5_passive`, `w1_6_passive`, `w1_7_passive`, `w1_8_passive`, `w1_9_passive`, `w1_10_passive`, `w1_11_passive`, `w1_12_passive`, `w1_13_passive`, `w1_14_passive`, `w1_15_passive`, `w1_16_passive`, `w1_17_passive`, `w1_18_passive`, `w1_19_passive`, `w1_20_passive`
         * `w2_1_passive`, `w2_2_passive`, `w2_3_passive`, `w2_4_passive`, `w2_5_passive`, `w2_6_passive`, `w2_7_passive`, `w2_8_passive`, `w2_9_passive`, `w2_10_passive`, `w2_11_passive`, `w2_12_passive`, `w2_13_passive`, `w2_14_passive`, `w2_15_passive`, `w2_16_passive`, `w2_17_passive`, `w2_18_passive`, `w2_19_passive`, `w2_20_passive`
