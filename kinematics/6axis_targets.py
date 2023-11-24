@@ -10,8 +10,9 @@ robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
 # Creating the solver
 solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)
+
 effector_task = solver.add_frame_task("effector", np.eye(4))
-effector_task.configure("effector", "soft", 10.0, 1.0)
+effector_task.configure("effector", "scaled", 10.0, 1.0)
 
 # Enable velocity limits
 solver.enable_velocity_limits(True)
@@ -52,7 +53,7 @@ def loop():
     robot.update_kinematics()
     solver.solve(True)
 
-    # Displaying the robot
+    # Displaying the robot, effector and target
     viz.display(robot.state.q)
     robot_frame_viz(robot, "effector")
     frame_viz("target", effector_task.T_world_frame)
