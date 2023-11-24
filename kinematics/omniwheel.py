@@ -11,8 +11,6 @@ viz = robot_viz(robot)
 # Creating the solver
 solver = placo.KinematicsSolver(robot)
 
-solver.enable_joint_limits(False)
-
 # Control the base
 base_task = solver.add_frame_task("base", np.eye(4))
 
