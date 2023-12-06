@@ -36,13 +36,6 @@ def loop():
     target = [1.5, np.cos(t) * 0.5, 0.75 + np.sin(2 * t) * 0.25]
     effector_task.T_world_frame = tf.translation_matrix(target)
 
-    # Drawing the last 50 targets (adding one point every 100ms)
-    if t - last_target_t > 0.1:
-        last_target_t = t
-        last_targets.append(target)
-        last_targets = last_targets[-50:]
-        points_viz("targets", last_targets, color=0xaaff00)
-
     # Solving the IK
     robot.update_kinematics()
     solver.solve(True)
@@ -51,6 +44,13 @@ def loop():
     viz.display(robot.state.q)
     robot_frame_viz(robot, "effector")
     frame_viz("target", effector_task.T_world_frame)
+
+    # Drawing the last 50 targets (adding one point every 100ms)
+    if t - last_target_t > 0.1:
+        last_target_t = t
+        last_targets.append(target)
+        last_targets = last_targets[-50:]
+        points_viz("targets", last_targets, color=0xaaff00)
 
 
 run_loop()
