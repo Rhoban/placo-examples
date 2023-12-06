@@ -62,7 +62,8 @@
     * **Passive** Revolute joints (4)
         * `ring1_br1`, `ring1_br2`, `ring2_br1`, `ring3_br1`
 * **Frames**:
-    * `effector`: effector frame
+    * `effector`: effector frame (attached to the platform)
+    * `base`: base frame (attached to the base, located at the bottom of the platform)
     * Closure constraint frames (4)
         * `closing_ring2_br2_1`, `closing_ring2_br2_2`
         * `closing_ring3_br2_1`, `closing_ring3_br2_2`
