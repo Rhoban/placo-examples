@@ -4,6 +4,10 @@ from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz
 from placo_utils.tf import tf
 
+"""
+6axis robot following an infinity sign (∞) trajectory
+"""
+
 # Loading the robot
 robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
 
@@ -32,7 +36,7 @@ def loop():
     global t, last_targets, last_target_t
     t += dt
 
-    # Updating the effector task (drawing an infinite oo sign)
+    # Updating the effector task (drawing an infinite sign ∞)
     target = [1.5, np.cos(t) * 0.5, 0.75 + np.sin(2 * t) * 0.25]
     effector_task.T_world_frame = tf.translation_matrix(target)
 
