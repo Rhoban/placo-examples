@@ -11,6 +11,21 @@
 * **Frames**:
     * `effector`: effector frame
 
+## Planar 2DoF
+
+<img src="planar-2dof/robot.png" width="300">
+
+* **Description**: Planar 2 DoF robot
+* **Joints**
+    * **Actuated**: Revolute joints (2)
+        * `motor1`, `motor2`
+    * **Passive**: Revolute joints (2)
+        * `passive1`, `passive2`
+* **Frames**:
+    * `effector`: effector frame
+    * Closure constraint frame:
+        * `closing_effector_1`, `closing_effector_2`
+
 ## Megabot
 
 <img src="megabot/robot.png" width="300">
