@@ -47,22 +47,22 @@ look_at_ball.configure("look_ball", "soft", 1.0)
 # Creating a very basic lateral swing and foot rise trajectory
 left_foot_z_traj = placo.CubicSpline()
 left_foot_z_traj.add_point(0.0, 0.0, 0.0)
-left_foot_z_traj.add_point(1.0, 0.05, 0.0)
+left_foot_z_traj.add_point(0.5, 0.05, 0.0)
+left_foot_z_traj.add_point(1.0, 0.0, 0.0)
 left_foot_z_traj.add_point(2.0, 0.0, 0.0)
-left_foot_z_traj.add_point(4.0, 0.0, 0.0)
 
 right_foot_z_traj = placo.CubicSpline()
 right_foot_z_traj.add_point(0.0, 0.0, 0.0)
+right_foot_z_traj.add_point(1.0, 0.0, 0.0)
+right_foot_z_traj.add_point(1.5, 0.05, 0.0)
 right_foot_z_traj.add_point(2.0, 0.0, 0.0)
-right_foot_z_traj.add_point(3.0, 0.05, 0.0)
-right_foot_z_traj.add_point(4.0, 0.0, 0.0)
 
 trunk_y_traj = placo.CubicSpline()
 initial_trunk_y = T_world_trunk[1, 3]
-trunk_y_traj.add_point(-1.0, initial_trunk_y + 0.05, 0.0)
-trunk_y_traj.add_point(1.0, initial_trunk_y - 0.05, 0.0)
-trunk_y_traj.add_point(3.0, initial_trunk_y + 0.05, 0.0)
-trunk_y_traj.add_point(5.0, initial_trunk_y - 0.05, 0.0)
+trunk_y_traj.add_point(-0.5, initial_trunk_y + 0.05, 0.0)
+trunk_y_traj.add_point(0.5, initial_trunk_y - 0.05, 0.0)
+trunk_y_traj.add_point(1.5, initial_trunk_y + 0.05, 0.0)
+trunk_y_traj.add_point(2.5, initial_trunk_y - 0.05, 0.0)
 
 # Setting custom target values for elbows
 posture_regularization_task = solver.add_joints_task()
@@ -87,7 +87,7 @@ def loop():
     global t
 
     # Updating the target
-    t_mod = t % 4.0
+    t_mod = t % 2.0
     target = left_foot_task.position().target_world
     target[2] = left_foot_z_traj.pos(t_mod)
     left_foot_task.position().target_world = target
@@ -113,7 +113,7 @@ def loop():
     robot_frame_viz(robot, "trunk")
     robot_frame_viz(robot, "camera")
     point_viz("com", robot.com_world(), radius=0.025, color=0xAAAAAA)
-    point_viz("ball", ball, radius=0.05, color=0xdddddd)
+    point_viz("ball", ball, radius=0.05, color=0xDDDDDD)
 
     t += dt
 
