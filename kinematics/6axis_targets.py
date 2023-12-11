@@ -4,6 +4,14 @@ import pinocchio as pin
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
 
+"""
+6axis robot reaching random targets.
+- The task is scaled, preserving the task direction
+- Velocity and joint limits are enforced
+
+(Depending on the robot configuration, the target may not be reachable)
+"""
+
 # Loading the robot
 robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
 
@@ -12,7 +20,7 @@ solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)
 
 effector_task = solver.add_frame_task("effector", np.eye(4))
-effector_task.configure("effector", "scaled", 10.0, 1.0)
+effector_task.configure("effector", "scaled", 1.0, 1.0)
 
 # Enable velocity limits
 solver.enable_velocity_limits(True)
