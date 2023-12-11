@@ -10,13 +10,12 @@ Sigmaban humanoid is moving its legs while looking at a moving ball.
 
 # Loading the robot
 robot = placo.HumanoidRobot("../models/sigmaban/")
+
+# Placing the left foot in world origin
 robot.set_T_world_frame("left_foot", np.eye(4))
 robot.update_kinematics()
 
-robot.set_joint("left_knee", 0.1)
-robot.set_joint("right_knee", 0.1)
-
-solver = robot.make_solver()
+solver = placo.KinematicsSolver(robot)
 
 # Retrieving initial position of the feet, com and trunk orientation
 T_world_left = robot.get_T_world_frame("left_foot")
