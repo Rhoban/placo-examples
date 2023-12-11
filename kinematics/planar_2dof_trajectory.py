@@ -49,8 +49,8 @@ def loop():
     robot.update_kinematics()
     solver.solve(True)
 
+    # Displaying the robot and the effector frame
     viz.display(robot.state.q)
-
     robot_frame_viz(robot, "effector")
 
     # Drawing the last 50 targets (adding one point every 100ms)

@@ -40,8 +40,8 @@ def loop():
     solver.solve(True)
     solver.dump_status()
 
+    # Displaying the robot and the effector frame
     viz.display(robot.state.q)
-
     robot_frame_viz(robot, "effector")
 
 
