@@ -20,8 +20,6 @@ solver.enable_velocity_limits(True)
 
 cone_constraint = solver.add_cone_constraint("base", "effector", 0.4)
 cone_constraint.configure("cone", "hard")
-cone_constraint.N = 8
-cone_constraint.range = 0.25
 
 # Adding closure constraints
 for closing in ["closing_ring2_br2", "closing_ring3_br2"]:
