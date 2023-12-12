@@ -1,6 +1,5 @@
 import placo
 import numpy as np
-import pinocchio as pin
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
 from placo_utils.tf import tf
@@ -28,7 +27,7 @@ solver.dt = dt
 
 @schedule(interval=dt)
 def loop():
-    global t, last_target
+    global t
     t += dt
 
     # Updating the target
