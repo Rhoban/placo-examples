@@ -16,7 +16,7 @@ Quadruped robot:
 robot = placo.RobotWrapper("../models/quadruped", placo.Flags.ignore_collisions)
 
 for leg in ["leg1", "leg2", "leg3", "leg4"]:
-    robot.set_joint_limits(leg + "_a", -np.pi, np.pi)
+    robot.set_joint_limits(leg + "_a", -np.pi/2, np.pi/2)
     robot.set_joint_limits(leg + "_c", 0.0, np.pi)
 
 solver = placo.KinematicsSolver(robot)
