@@ -20,7 +20,8 @@ for leg in range(1, 5):
         security_margin = 0.02  # [m]
         robot.set_joint_limits(f"l{leg}_c{c}", security_margin, 0.2 - security_margin)
 
-solver = robot.make_solver()
+# Initializing the kinematics solver
+solver = placo.KinematicsSolver(robot)
 
 # Adding hard closing loop constraints to match l*_cl*_1 and l*_cl*_2 in the XZ plane
 for leg in range(1, 5):
