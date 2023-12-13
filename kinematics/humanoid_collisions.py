@@ -44,7 +44,7 @@ right_foot_task.configure("right_foot", "soft", 1e3, 1e3)
 # Regularization task
 posture_regularization_task = solver.add_joints_task()
 posture_regularization_task.set_joints(
-    {dof: 0.0 for dof in robot.actuated_joint_names()}
+    {dof: 0.0 for dof in robot.joint_names()}
 )
 posture_regularization_task.configure("reg", "soft", 1e-5)
 

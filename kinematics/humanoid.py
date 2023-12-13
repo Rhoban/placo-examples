@@ -60,7 +60,7 @@ right_foot_z_traj.add_point(2.0, 0.0, 0.0)
 # Regularization task
 posture_regularization_task = solver.add_joints_task()
 posture_regularization_task.set_joints(
-    {dof: 0.0 for dof in robot.actuated_joint_names()}
+    {dof: 0.0 for dof in robot.joint_names()}
 )
 posture_regularization_task.configure("reg", "soft", 1e-5)
 
