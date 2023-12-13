@@ -36,7 +36,6 @@ left_foot_task.configure("left_foot", "soft", 1.0, 1.0)
 
 right_foot_task = solver.add_frame_task("right_foot", T_world_right)
 right_foot_task.configure("right_foot", "soft", 1.0, 1.0)
-right_foot_task.T_world_frame = T_world_right
 
 # Look at ball
 look_at_ball = solver.add_axisalign_task(
@@ -64,7 +63,7 @@ trunk_y_traj.add_point(0.5, initial_trunk_y - 0.05, 0.0)
 trunk_y_traj.add_point(1.5, initial_trunk_y + 0.05, 0.0)
 trunk_y_traj.add_point(2.5, initial_trunk_y - 0.05, 0.0)
 
-# Setting custom target values for elbows
+# Regularization task
 posture_regularization_task = solver.add_joints_task()
 posture_regularization_task.set_joints(
     {dof: 0.0 for dof in robot.actuated_joint_names()}
