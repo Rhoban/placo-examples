@@ -34,9 +34,9 @@ for _ in range(32):
     solver.solve(True)
 
 # Support legs should not move (hard constraint)
-leg1.configure("leg1", "hard", 0.0)
-leg2.configure("leg2", "hard", 0.0)
-leg4.configure("leg4", "hard", 0.0)
+leg1.configure("leg1", "hard")
+leg2.configure("leg2", "hard")
+leg4.configure("leg4", "hard")
 support_tasks = [leg1, leg4, leg2]
 for k in range(3):
     line_from = support_tasks[k].target_world
