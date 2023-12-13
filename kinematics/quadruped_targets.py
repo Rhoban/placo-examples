@@ -56,7 +56,7 @@ polygon = np.array([
     [0.02, -0.15]
 ])
 com = solver.add_com_polygon_constraint(polygon, 0.015)
-com.configure("com_constraint", "hard", 0.)
+com.configure("com_constraint", "hard")
 
 # Limiting velocities to 1 rad/s
 robot.set_velocity_limits(1.)
