@@ -38,11 +38,9 @@ leg1.configure("leg1", "hard", 0.0)
 leg2.configure("leg2", "hard", 0.0)
 leg4.configure("leg4", "hard", 0.0)
 support_tasks = [leg1, leg4, leg2]
-polygon = []
 for k in range(3):
     line_from = support_tasks[k].target_world
     line_to = support_tasks[(k + 1) % 3].target_world
-    polygon.append(line_from[:2])
     line_viz(f"support_{k}", np.array([line_from, line_to]), color=0xFFAA00)
 
 # The body should remain (soft constraint)
@@ -52,6 +50,11 @@ body_task.configure("body", "soft", 1.0, 1.0)
 leg3.configure("leg3", "soft", 1e3)
 
 # Adding a polygon constraint to avoid robot tilting
+polygon = np.array([
+    [-0.15, 0.],
+    [0.02, 0.15],
+    [0.02, -0.15]
+])
 com = solver.add_com_polygon_constraint(polygon, 0.015)
 com.configure("com_constraint", "hard", 0.)
 
