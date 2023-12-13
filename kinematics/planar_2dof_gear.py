@@ -17,6 +17,7 @@ closing_task.mask.set_axises("xy")
 
 # Adding a gear between the joints
 gear_task = solver.add_gear_task()
+gear_task.configure("gear", "hard")
 gear_task.set_gear("motor2", "motor1", -1.0)
 
 # Adding a task for the joints
