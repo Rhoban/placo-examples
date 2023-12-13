@@ -25,10 +25,11 @@ T_world_right = robot.get_T_world_frame("right_foot")
 viz = robot_viz(robot)
 
 # Trunk
-T_world_trunk = robot.get_T_world_frame("trunk")
-T_world_trunk[2, 3] = 0.35
-trunk_task = solver.add_frame_task("trunk", T_world_trunk)
-trunk_task.configure("trunk_task", "soft", 1.0, 1.0)
+com_task = solver.add_com_task(np.array([0.0, 0.0, 0.3]))
+com_task.configure("com", "soft", 1.0)
+
+trunk_orientation_task = solver.add_orientation_task("trunk", np.eye(3))
+trunk_orientation_task.configure("trunk_orientation", "soft", 1.0)
 
 # Keep left and right foot on the floor
 left_foot_task = solver.add_frame_task("left_foot", T_world_left)
@@ -55,13 +56,6 @@ right_foot_z_traj.add_point(0.0, 0.0, 0.0)
 right_foot_z_traj.add_point(1.0, 0.0, 0.0)
 right_foot_z_traj.add_point(1.5, 0.05, 0.0)
 right_foot_z_traj.add_point(2.0, 0.0, 0.0)
-
-trunk_y_traj = placo.CubicSpline()
-initial_trunk_y = T_world_trunk[1, 3]
-trunk_y_traj.add_point(-0.5, initial_trunk_y + 0.05, 0.0)
-trunk_y_traj.add_point(0.5, initial_trunk_y - 0.05, 0.0)
-trunk_y_traj.add_point(1.5, initial_trunk_y + 0.05, 0.0)
-trunk_y_traj.add_point(2.5, initial_trunk_y - 0.05, 0.0)
 
 # Regularization task
 posture_regularization_task = solver.add_joints_task()
@@ -95,9 +89,8 @@ def loop():
     target[2] = right_foot_z_traj.pos(t_mod)
     right_foot_task.position().target_world = target
 
-    target = trunk_task.position().target_world
-    target[1] = trunk_y_traj.pos(t_mod)
-    trunk_task.position().target_world = target
+    # Updating the com target with lateral sinusoidal trajectory
+    com_task.target_world = np.array([0.0, -np.sin(t * np.pi) * 0.05 - 0.05, 0.3])
 
     # Looking at ball
     ball = np.array([0.5 + np.cos(t) * 0.25, np.sin(t) * 0.7, 0.0])
