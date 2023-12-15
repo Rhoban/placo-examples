@@ -95,7 +95,6 @@ def loop():
     # Looking at ball
     ball = np.array([0.5 + np.cos(t) * 0.25, np.sin(t) * 0.7, 0.0])
     camera_pos = robot.get_T_world_frame("camera")[:3, 3]
-    look_at_ball.R_world_frame = placo.rotation_from_axis("z", ball - camera_pos)
     look_at_ball.targetAxis_world = ball - camera_pos
 
     robot.update_kinematics()
