@@ -1,0 +1,154 @@
+<robot name="onshape">
+<link name="base">
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///base.stl"/>
+</geometry>
+<material name="base_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-4.3854433115842976622e-19 1.3777276490407727741e-18 0.002500000000000000052" rpy="0 0 0"/>
+<mass value="0.022106994804229673779" />
+<inertia ixx="2.8439727690857972453e-06" ixy="0"  ixz="0" iyy="2.8439727690857968218e-06" iyz="0" izz="5.5958330598206373096e-06" />
+</inertial>
+</link>
+
+<link name="ring">
+<visual>
+<origin xyz="-1.2456679569688523307e-17 6.3186423493322252371e-18 0.010000000000000001943" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package:///ring.stl"/>
+</geometry>
+<material name="ring_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-1.2456679569688523307e-17 6.3186423493322252371e-18 0.010000000000000001943" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package:///ring.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-7.4956339216216007589e-18 3.9025233340674734395e-18 0.0025000000000000013531" rpy="0 0 0"/>
+<mass value="0.021266466137444883094" />
+<inertia ixx="8.1309860336448472432e-06" ixy="0"  ixz="0" iyy="8.1309860336448472432e-06" iyz="0" izz="1.6173361791717006628e-05" />
+</inertial>
+</link>
+
+<joint name="lower" type="revolute">
+<origin xyz="6.9787070280364672227e-18 -2.5134897948386625574e-18 0.0050000000000000009714" rpy="0 -0 0" />
+<parent link="base" />
+<child link="ring" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="ring_2">
+<visual>
+<origin xyz="0 -1.3777276490407723889e-18 -0.010000000000000001943" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///ring.stl"/>
+</geometry>
+<material name="ring_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 -1.3777276490407723889e-18 -0.010000000000000001943" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///ring.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="4.9610456480669217779e-18 1.0383913662239794087e-18 -0.0025000000000000013531" rpy="0 0 0"/>
+<mass value="0.021266466137444883094" />
+<inertia ixx="8.1309860336448472432e-06" ixy="0"  ixz="0" iyy="8.1309860336448472432e-06" iyz="0" izz="1.6173361791717006628e-05" />
+</inertial>
+</link>
+
+<joint name="upper" type="revolute">
+<origin xyz="0 1.3777276490407725815e-18 0.044999999999999998335" rpy="0 -0 0" />
+<parent link="base" />
+<child link="ring_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="shaft1">
+<visual>
+<origin xyz="-1.4027763383387754017e-18 2.2871353342479820196e-20 0.044999999999999991396" rpy="3.141592653589793116 -0 5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package:///shaft1.stl"/>
+</geometry>
+<material name="shaft1_material">
+<color rgba="0.90980392156862743835 0.57254901960784310155 0.16470588235294117418 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-1.4027763383387754017e-18 2.2871353342479820196e-20 0.044999999999999991396" rpy="3.141592653589793116 -0 5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package:///shaft1.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.0215871159641082651e-18 7.0520006139313236345e-20 0.019999999999999993477" rpy="0 0 0"/>
+<mass value="0.024130399999999996297" />
+<inertia ixx="3.6447745999999983089e-06" ixy="0"  ixz="0" iyy="3.6447745999999983089e-06" iyz="0" izz="8.5477586666666646029e-07" />
+</inertial>
+</link>
+
+<link name="shaft2">
+<visual>
+<origin xyz="8.2216607945312846084e-18 0.024999999999999984041 0.0074999999999999979877" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package:///shaft2.stl"/>
+</geometry>
+<material name="shaft2_material">
+<color rgba="0.2313725490196078538 0.38039215686274507888 0.7058823529411765163 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="8.2216607945312846084e-18 0.024999999999999984041 0.0074999999999999979877" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package:///shaft2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.233693477885491624e-18 -3.4694469519536141888e-18 -0.013626350457042789646" rpy="0 0 0"/>
+<mass value="0.046198276629261847415" />
+<inertia ixx="4.7421480701010967467e-06" ixy="0"  ixz="0" iyy="4.7421480701010950527e-06" iyz="0" izz="5.1069655949723369678e-06" />
+</inertial>
+</link>
+
+<joint name="beta" type="revolute">
+<origin xyz="-4.725960828366940336e-18 -0.0075000000000000023245 0.01999999999999997613" rpy="-1.570796326794896558 -0 0" />
+<parent link="shaft1" />
+<child link="shaft2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="alpha" type="revolute">
+<origin xyz="-4.3335586649446777637e-18 1.9137705312060885725e-18 0.004999999999999997502" rpy="0 -0 0.31923972210080497902" />
+<parent link="base" />
+<child link="shaft1" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>
