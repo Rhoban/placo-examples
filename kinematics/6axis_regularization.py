@@ -17,6 +17,7 @@ With --kinetic: a kinetic energy regularization will be applied
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-k", "--kinetic", action="store_true")
+parser.add_argument("-m", "--manipulability", action="store_true")
 parser.add_argument("-p", "--posture", action="store_true")
 parser.add_argument("-l", "--strong_l2", action="store_true")
 args = parser.parse_args()
@@ -39,6 +40,9 @@ elif args.posture:
     posture = solver.add_joints_task()
     posture.set_joints({f"r{i}": 0.0 for i in range(1, 7)})
     posture.configure("posture", "soft", 1e-6)
+elif args.manipulability:
+    manipulability = solver.add_manipulability_task("effector", "both", 1.0)
+    manipulability.configure("manipulability", "soft", 1e-3)
 
 # Enable velocity limits
 solver.enable_velocity_limits(True)
