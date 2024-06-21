@@ -20,7 +20,7 @@ solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)
 
 effector_task = solver.add_frame_task("effector", np.eye(4))
-effector_task.configure("effector", "scaled", 1.0, 1.0)
+effector_task.configure("effector", "soft", 1.0, 1.0)
 
 # Enable velocity limits
 solver.enable_velocity_limits(True)
