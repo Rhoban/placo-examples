@@ -6,7 +6,6 @@ from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
 
 """
 6axis robot reaching random targets.
-- The task is scaled, preserving the task direction
 - Velocity and joint limits are enforced
 
 (Depending on the robot configuration, the target may not be reachable)
