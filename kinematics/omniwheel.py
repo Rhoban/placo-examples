@@ -30,8 +30,8 @@ def loop():
     T_world_base = tf.translation_matrix([np.sin(t)*.25, np.cos(t)*.25, 0.05])
     base_task.T_world_frame = T_world_base
 
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
     viz.display(robot.state.q)
     robot_frame_viz(robot, "base")
 

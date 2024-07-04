@@ -79,8 +79,8 @@ def loop():
     base_task.T_world_frame = T
 
     # Updating the kinematics and solving the IK
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     # Displaying
     viz.display(robot.state.q)

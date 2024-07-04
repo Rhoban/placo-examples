@@ -41,8 +41,8 @@ def loop():
     joints_task.set_joints({"motor1": np.sin(t)*.3})
 
     # Solving the IK
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
     solver.dump_status()
 
     # Displaying the robot and the effector frame

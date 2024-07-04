@@ -97,8 +97,8 @@ def loop():
     camera_pos = robot.get_T_world_frame("camera")[:3, 3]
     look_at_ball.targetAxis_world = ball - camera_pos
 
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     viz.display(robot.state.q)
     robot_frame_viz(robot, "trunk")

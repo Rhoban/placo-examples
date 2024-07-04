@@ -44,8 +44,8 @@ while True:
     joints_task.set_joints({"ring1": np.sin(t * 3)})
 
     # Solving kinematics
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
     solver.dump_status()
 
     # Displaying

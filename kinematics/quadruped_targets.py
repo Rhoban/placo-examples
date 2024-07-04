@@ -100,8 +100,8 @@ def loop():
     robot_frame_viz(robot, "body")
     frame_viz("body_target", body_task.T_world_frame, opacity=.25)
 
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     viz.display(robot.state.q)
 

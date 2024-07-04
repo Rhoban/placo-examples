@@ -48,8 +48,8 @@ while True:
     frame_viz("T", T, 0.25)
 
     # Solving kinematics
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
     solver.dump_status()
 
     # Displaying

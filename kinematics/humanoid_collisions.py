@@ -50,8 +50,8 @@ posture_regularization_task.configure("reg", "soft", 1e-5)
 
 # Initializing robot position before enabling constraints
 for _ in range(32):
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
 # Enabling joint and velocity limits
 solver.enable_joint_limits(True)
@@ -82,8 +82,8 @@ def loop():
         [np.sin(t * 2.5) * 0.05, np.sin(t * 3) * 0.1, 0.04]
     ) @ tf.rotation_matrix(np.sin(t) * 0.25, [1, 0, 0])
 
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     viz.display(robot.state.q)
     robot_frame_viz(robot, "left_foot")
