@@ -33,8 +33,8 @@ def loop():
     joints_task.set_joints({"r1": np.sin(t)})
 
     # Solving the IK
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     # Displaying the robot, effector and target
     viz.display(robot.state.q)

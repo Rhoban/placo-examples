@@ -63,8 +63,8 @@ def loop():
     effector_task.target_world = np.array([1.0, 0.5 * np.sin(t), 1.0])
 
     # Solving the IK
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     # Displaying the robot, effector and target
     viz.display(robot.state.q)

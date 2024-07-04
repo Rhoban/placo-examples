@@ -24,6 +24,7 @@ effector_task.configure("effector", "scaled", 1.0, 1.0)
 # Enable velocity limits
 solver.enable_velocity_limits(True)
 
+robot.update_kinematics()
 viz = robot_viz(robot)
 
 t = 0
@@ -42,8 +43,8 @@ def loop():
     )
 
     # Solving the IK
+    qd = solver.solve(True)
     robot.update_kinematics()
-    solver.solve(True)
 
     # Displaying the robot, effector and target
     viz.display(robot.state.q)

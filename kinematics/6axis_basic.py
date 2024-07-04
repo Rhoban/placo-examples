@@ -34,8 +34,8 @@ def loop():
     effector_task.T_world_frame = tf.translation_matrix([1.25, np.sin(t), 1.0])
 
     # Solving the IK
-    robot.update_kinematics()
     solver.solve(True)
+    robot.update_kinematics()
 
     # Displaying the robot, effector and target
     viz.display(robot.state.q)
