@@ -1,6 +1,5 @@
 import placo
 import numpy as np
-import time
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, point_viz
 
