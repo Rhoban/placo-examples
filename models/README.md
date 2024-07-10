@@ -11,6 +11,19 @@
 * **Frames**:
     * `effector`: effector frame
 
+
+## 6axis (UR5)
+
+<img src="ur5/robot.png" width="300">
+
+* **Description**: UR5 6-axis industrial robot
+* **Joints**:
+    * **Actuated**: Revolute joints (6)
+        * `shoulder_pan_joint`, `shoulder_lift_joint`, `elbow_joint`, `wrist_1_joint`, `wrist_2_joint`, `wrist_3_joint`
+* **Frames**:
+    * `world`: base of the robot
+    * `ee_link`: effector  frame
+
 ## Planar 2DoF
 
 <img src="planar-2dof/robot.png" width="300">
