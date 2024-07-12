@@ -47,7 +47,6 @@ def get_trajectory(t: float):
 
 
 t = 0
-last_target = 0
 dt = 0.01
 refine = 10
 solver.dt = dt / refine
@@ -55,7 +54,7 @@ solver.dt = dt / refine
 
 @schedule(interval=dt)
 def loop():
-    global t, last_target
+    global t
 
     # Updating the solver (10 times)
     for _ in range(refine):
