@@ -10,7 +10,9 @@ UR5 following a given trajectory, basic example for the dynamics solver.
 """
 
 args_parser = argparse.ArgumentParser()
-args_parser.add_argument("--no-velocity", help="Disable velocity tracking", action="store_true")
+args_parser.add_argument(
+    "--no-velocity", help="Disable velocity tracking", action="store_true"
+)
 args = args_parser.parse_args()
 
 # Loading the robot
@@ -47,18 +49,18 @@ def get_trajectory(t: float):
 
 
 t = 0
-dt = 0.01
-refine = 10
-solver.dt = dt / refine
+solver.dt = 0.001
+view_fps = 50  # FPS for viewer
+steps_per_view = int((1 / view_fps) / solver.dt)
 
 
-@schedule(interval=dt)
+@schedule(interval=(1 / view_fps))
 def loop():
     global t
 
     # Updating the solver (10 times)
-    for _ in range(refine):
-        t += dt / refine
+    for _ in range(steps_per_view):
+        t += solver.dt
 
         T_world_effector, dtarget_world = get_trajectory(t)
         effector_task.T_world_frame = T_world_effector

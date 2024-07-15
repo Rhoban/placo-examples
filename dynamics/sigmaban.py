@@ -23,9 +23,9 @@ robot.update_kinematics()
 solver = placo.DynamicsSolver(robot)
 legs_spacing = 0.1
 t = 0.0
-dt = 0.01
-refine = 10
-solver.dt = dt / refine
+solver.dt = 0.001
+view_fps = 50  # FPS for viewer
+steps_per_view = int((1 / view_fps) / solver.dt)
 
 # Adding a task for the trunk
 com_world = np.array([0.0, 0.0, 0.33])
@@ -92,12 +92,12 @@ solver.remove_contact(puppet)
 viz = robot_viz(robot)
 
 
-@schedule(interval=dt)
+@schedule(interval=(1 / view_fps))
 def loop():
     global t
 
-    for k in range(refine):
-        t += dt / refine
+    for _ in range(steps_per_view):
+        t += solver.dt
         t = t % 10
 
         com_task.target_world = com_trajectory.pos(t)

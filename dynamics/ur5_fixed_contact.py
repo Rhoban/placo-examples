@@ -35,18 +35,18 @@ solver.enable_joint_limits(True)
 viz = robot_viz(robot)
 
 t = 0
-dt = 0.01
-refine = 10
-solver.dt = dt / refine
+solver.dt = 0.001
+view_fps = 50  # FPS for viewer
+steps_per_view = int((1 / view_fps) / solver.dt)
 
 
-@schedule(interval=dt)
+@schedule(interval=(1 / view_fps))
 def loop():
     global t
 
     # Updating the solver (10 times)
-    for _ in range(refine):
-        t += dt / refine
+    for _ in range(steps_per_view):
+        t += solver.dt
 
         effector_task.T_world_frame = tf.translation_matrix(
             [0.4, 0.25 * np.sin(t * 3), 0.4]
