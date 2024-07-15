@@ -26,17 +26,20 @@ robot.update_kinematics()
 
 solver = placo.DynamicsSolver(robot)
 
+# Adding contact points and tasks
 for k in range(1, 5):
     leg_world = robot.get_T_world_frame(f"leg{k}")[:3, 3]
     leg_task = solver.add_position_task(f"leg{k}", leg_world)
-    leg_task.configure(f"leg{k}_pos", "soft", 1.0)
+    leg_task.configure(f"leg{k}_pos", "hard")
     leg_task.kp = 1e5
     contact = solver.add_point_contact(leg_task)
 
-# Enabling all the limits
+# Enabling torque and velocity limits
 solver.enable_torque_limits(True)
 solver.enable_velocity_limits(True)
 
+# This DoF will be controlled with a sinusoidal trajectory
+# The others will be set to a zero torque
 controlled_dof = "leg1_b"
 
 # Creating a joints task
