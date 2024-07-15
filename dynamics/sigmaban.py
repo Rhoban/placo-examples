@@ -13,7 +13,7 @@ In this example, the Sigmaban humanoid robot is on the ground, moving its center
 and rising the opposing foot.
 
 This demostrates the use of CoM task, orientation task, frame tasks, planar contacts, and puppet contacts
-for initialization.
+for initialization. 
 """
 
 robot = placo.RobotWrapper("../models/sigmaban/")
