@@ -209,7 +209,7 @@
 <parent link="platesblock" />
 <child link="leg" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
+<limit effort="1" velocity="12" lower="0.0" upper="3.1415926" />
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -218,7 +218,7 @@
 <parent link="doubleu" />
 <child link="platesblock" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -227,7 +227,7 @@
 <parent link="body" />
 <child link="doubleu" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -364,7 +364,7 @@
 <parent link="platesblock_2" />
 <child link="leg_2" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
+<limit effort="1" velocity="12" lower="0.0" upper="3.1415926" />
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -373,7 +373,7 @@
 <parent link="doubleu_2" />
 <child link="platesblock_2" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -382,7 +382,7 @@
 <parent link="body" />
 <child link="doubleu_2" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -519,7 +519,7 @@
 <parent link="platesblock_3" />
 <child link="leg_3" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
+<limit effort="1" velocity="12" lower="0.0" upper="3.1415926" />
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -528,7 +528,7 @@
 <parent link="doubleu_3" />
 <child link="platesblock_3" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -537,7 +537,7 @@
 <parent link="body" />
 <child link="doubleu_3" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -674,7 +674,7 @@
 <parent link="platesblock_4" />
 <child link="leg_4" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
+<limit effort="1" velocity="12" lower="0.0" upper="3.1415926" />
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -683,7 +683,7 @@
 <parent link="doubleu_4" />
 <child link="platesblock_4" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -692,7 +692,7 @@
 <parent link="body" />
 <child link="doubleu_4" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<limit effort="1" velocity="12" lower="-1.570796326794896558" upper="1.570796326794896558"/>
 <joint_properties friction="0.0"/>
 </joint>
 
