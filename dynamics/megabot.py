@@ -81,13 +81,13 @@ for leg in range(1, 5):
     leg_contact.weight_tangentials = 1e-6
 
 t = 0
-solver.dt = 0.001
+solver.dt = 0.002
 view_fps = 50  # FPS for viewer
 steps_per_view = int((1 / view_fps) / solver.dt)
 
 # Adding a puppet contact for initialization
 puppet_contact = solver.add_puppet_contact()
-for k in range(1000):
+for k in range(2000):
     solver.solve(True)
     robot.update_kinematics()
 solver.remove_contact(puppet_contact)
@@ -101,6 +101,7 @@ solver.enable_joint_limits(True)
 def loop():
     global t
 
+    t0 = time.time()
     for _ in range(steps_per_view):
         t += solver.dt
 
@@ -110,8 +111,10 @@ def loop():
         T[1, 3] = np.sin(t) * 0.15
         base_task.T_world_frame = T
 
-        result = solver.solve(True)
+        solver.solve(True)
         robot.update_kinematics()
+    t1 = time.time()
+    print("Solve time (µs):", ((t1 - t0) * 1e6) / steps_per_view)
 
     # Displaying
     viz.display(robot.state.q)
