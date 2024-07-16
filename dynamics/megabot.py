@@ -81,8 +81,8 @@ for leg in range(1, 5):
     leg_contact.weight_tangentials = 1e-6
 
 t = 0
-solver.dt = 0.002
-view_fps = 50  # FPS for viewer
+solver.dt = 0.005
+view_fps = 25  # FPS for viewer
 steps_per_view = int((1 / view_fps) / solver.dt)
 
 # Adding a puppet contact for initialization
