@@ -50,11 +50,11 @@
         * `l2_c1`, `l2_c2`, `l2_c3`
         * `l3_c1`, `l3_c2`, `l3_c3`
         * `l4_c1`, `l4_c2`, `l4_c3`
-    * **Passive**: Revolute joints (7 per leg)
-        * `l1_r1`, `l1_r2`, `l1_r3`, `l1_r4`, `l1_r5`, `l1_r6`, `l1_r7`
-        * `l2_r1`, `l2_r2`, `l2_r3`, `l2_r4`, `l2_r5`, `l2_r6`, `l2_r7`
-        * `l3_r1`, `l3_r2`, `l3_r3`, `l3_r4`, `l3_r5`, `l3_r6`, `l3_r7`
-        * `l4_r1`, `l4_r2`, `l4_r3`, `l4_r4`, `l4_r5`, `l4_r6`, `l4_r7`
+    * **Passive**: Revolute joints (8 per leg)
+        * `l1_r1`, `l1_r2`, `l1_r3`, `l1_r4`, `l1_r5`, `l1_r6`, `l1_r7`, `l1_r8`
+        * `l2_r1`, `l2_r2`, `l2_r3`, `l2_r4`, `l2_r5`, `l2_r6`, `l2_r7`, `l2_r8`
+        * `l3_r1`, `l3_r2`, `l3_r3`, `l3_r4`, `l3_r5`, `l3_r6`, `l3_r7`, `l3_r8`
+        * `l4_r1`, `l4_r2`, `l4_r3`, `l4_r4`, `l4_r5`, `l4_r6`, `l4_r7`, `l4_r8`
 * **Frames**:
     * `base`: body trunk
     * `leg_1`, `leg_2`, `leg_3`, `leg_4`: leg tips
