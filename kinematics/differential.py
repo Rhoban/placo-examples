@@ -10,6 +10,7 @@ A differential gear system, demosntrating the use of gear task.
 
 robot = placo.RobotWrapper("../models/differential/", placo.Flags.ignore_collisions)
 solver = placo.KinematicsSolver(robot)
+solver.mask_fbase(True)
 
 # Adding gears coupling constraints
 gears = solver.add_gear_task()
