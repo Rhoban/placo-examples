@@ -78,7 +78,6 @@ for leg in range(1, 5):
     leg_task = solver.add_position_task(name, leg_targets[name])
     leg_task.configure(name, "hard", 1.0)
     leg_contact = solver.add_point_contact(leg_task)
-    leg_contact.weight_tangentials = 1e-6
 
 t = 0
 solver.dt = 0.005
@@ -96,12 +95,10 @@ solver.enable_torque_limits(True)
 solver.enable_velocity_limits(True)
 solver.enable_joint_limits(True)
 
-
 @schedule(interval=(1 / view_fps))
 def loop():
     global t
 
-    t0 = time.time()
     for _ in range(steps_per_view):
         t += solver.dt
 
@@ -111,10 +108,12 @@ def loop():
         T[1, 3] = np.sin(t) * 0.15
         base_task.T_world_frame = T
 
+        base_task.position().dtarget_world = np.array(
+            [-np.sin(t) * 0.15, np.cos(t) * 0.15, 0.0]
+        )
+
         solver.solve(True)
         robot.update_kinematics()
-    t1 = time.time()
-    print("Solve time (µs):", ((t1 - t0) * 1e6) / steps_per_view)
 
     # Displaying
     viz.display(robot.state.q)
