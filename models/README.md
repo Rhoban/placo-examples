@@ -127,3 +127,16 @@
     * `trunk`: body frame
     * `left_foot`, `right_foot`: foot tips
     * `camera`: camera frame
+
+## Differential
+
+<img src="megabot/differential.png" width="300">
+
+* **Description**: A simplified and fake differential gears system
+* **Joints**
+    * **Actuated**: Revolute joints
+        * `lower`, `upper`
+    * **Passive**: Revolute joints
+        * `alpha`, `beta`
+* **Frames**:
+    * `effector`: effector
