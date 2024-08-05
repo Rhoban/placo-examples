@@ -130,7 +130,7 @@
 
 ## Differential
 
-<img src="megabot/differential.png" width="300">
+<img src="differential/robot.png" width="300">
 
 * **Description**: A simplified and fake differential gears system
 * **Joints**
