@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument(
-    "-p", "--pybullet", action="store_true", help="PyBullet visualization"
+    "-p", "--pybullet", action="store_true", help="PyBullet simulation"
 )
 parser.add_argument(
     "-m", "--meshcat", action="store_true", help="MeshCat visualization"
