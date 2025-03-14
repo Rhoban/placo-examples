@@ -1,0 +1,13 @@
+{
+        "url": "https://cad.onshape.com/documents/d028fa2bf853f0c1089b2eda/w/07caf1293628e1642b8cee41/e/1a20b014b0a60532533cddf2",
+	"output_format": "urdf",
+	"assembly_name": "SPM v2",
+	"simplify_stls": true,
+	"max_stl_size": 1,
+
+	"ignore": {
+		"*": "collision",
+		"!*_Lien*": "collision",
+		"!*_ArbreMoteur*": "collision"
+	}
+}

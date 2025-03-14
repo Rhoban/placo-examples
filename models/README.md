@@ -140,3 +140,18 @@
         * `alpha`, `beta`
 * **Frames**:
     * `effector`: effector
+
+## SPM
+
+<img src="spm/robot.png" width="300">
+
+* **Description**: A spherical parallel manipulator (SPM)
+* **Joints**
+    * **Actuated**: Revolute joints
+        * `m1`, `m2`, `m3`
+    * **Passive**: Revolute joints
+        * `m1_p1`, `m2_p1`, `m3_p1`, `m2_p2`
+* **Frames**:
+    * `effector`: effector (platform)
+    * `closing_m1_p2_1`, `closing_m1_p2_2`: loop closure frame
+    * `closing_m3_p2_1`, `closing_m3_p2_2`: loop closure frame
