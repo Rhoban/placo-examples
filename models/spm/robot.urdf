@@ -5,13 +5,13 @@
   <!-- Link moteur_bati_v2 -->
   <link name="moteur_bati_v2">
     <inertial>
-      <origin xyz="1.27421e-15 2.6709e-15 0.0444979" rpy="0 0 0"/>
+      <origin xyz="-1.75928e-15 2.49372e-15 0.0444979" rpy="0 0 0"/>
       <mass value="0.925424"/>
-      <inertia ixx="0.00239196" ixy="-4.73404e-17" ixz="-2.47559e-17" iyy="0.00239196" iyz="-7.30732e-17" izz="0.00451909"/>
+      <inertia ixx="0.00239196" ixy="-7.45589e-17" ixz="5.10426e-17" iyy="0.00239196" iyz="-5.80928e-17" izz="0.00451909"/>
     </inertial>
     <!-- Part b08_cra_ri30_40_pro_xx_客户参考 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/b08_cra_ri30_40_pro_xx_客户参考.stl"/>
       </geometry>
@@ -21,7 +21,7 @@
     </visual>
     <!-- Part cra_ri30_40_pro_xx_后盖 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_pro_xx_后盖.stl"/>
       </geometry>
@@ -31,7 +31,7 @@
     </visual>
     <!-- Part extruded_4_2 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_2.stl"/>
       </geometry>
@@ -41,7 +41,7 @@
     </visual>
     <!-- Part 1_bati3 -->
     <visual>
-      <origin xyz="-0.00801111 -0.037022 0.0198908" rpy="0.785398 -0 -0.523599"/>
+      <origin xyz="0.0280564 -0.0254488 0.0198908" rpy="0.785398 -0 0.523599"/>
       <geometry>
         <mesh filename="package://assets/1_bati3.stl"/>
       </geometry>
@@ -51,7 +51,7 @@
     </visual>
     <!-- Part extruded_6 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_6.stl"/>
       </geometry>
@@ -61,7 +61,7 @@
     </visual>
     <!-- Part extruded_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_1.stl"/>
       </geometry>
@@ -71,7 +71,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_柔轮盖 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_柔轮盖.stl"/>
       </geometry>
@@ -81,7 +81,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5.stl"/>
       </geometry>
@@ -91,7 +91,7 @@
     </visual>
     <!-- Part extruded_4_4 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_4.stl"/>
       </geometry>
@@ -101,7 +101,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap.stl"/>
       </geometry>
@@ -111,7 +111,7 @@
     </visual>
     <!-- Part extruded_2 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_2.stl"/>
       </geometry>
@@ -121,7 +121,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_2 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__2.stl"/>
       </geometry>
@@ -131,7 +131,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_3 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__3.stl"/>
       </geometry>
@@ -141,7 +141,7 @@
     </visual>
     <!-- Part extruded -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded.stl"/>
       </geometry>
@@ -151,7 +151,7 @@
     </visual>
     <!-- Part extruded_4_3 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_3.stl"/>
       </geometry>
@@ -161,7 +161,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_b_电机壳_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_b_电机壳_1.stl"/>
       </geometry>
@@ -171,7 +171,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2.stl"/>
       </geometry>
@@ -181,7 +181,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6.stl"/>
       </geometry>
@@ -191,7 +191,7 @@
     </visual>
     <!-- Part lsg_8_减速器外圈固定_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/lsg_8_减速器外圈固定_1.stl"/>
       </geometry>
@@ -201,7 +201,7 @@
     </visual>
     <!-- Part extruded_0 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_0.stl"/>
       </geometry>
@@ -211,7 +211,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n.stl"/>
       </geometry>
@@ -221,7 +221,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4.stl"/>
       </geometry>
@@ -231,7 +231,7 @@
     </visual>
     <!-- Part extruded_1_2 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_1__2.stl"/>
       </geometry>
@@ -241,7 +241,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1.stl"/>
       </geometry>
@@ -251,7 +251,7 @@
     </visual>
     <!-- Part extruded_4_5 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_5.stl"/>
       </geometry>
@@ -261,7 +261,7 @@
     </visual>
     <!-- Part lsg_08_柔轮 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/lsg_08_柔轮.stl"/>
       </geometry>
@@ -271,7 +271,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1.stl"/>
       </geometry>
@@ -281,7 +281,7 @@
     </visual>
     <!-- Part extruded_5 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_5.stl"/>
       </geometry>
@@ -291,7 +291,7 @@
     </visual>
     <!-- Part extruded_4_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_1.stl"/>
       </geometry>
@@ -301,7 +301,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3.stl"/>
       </geometry>
@@ -311,7 +311,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n.stl"/>
       </geometry>
@@ -321,7 +321,7 @@
     </visual>
     <!-- Part extruded_4 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_4.stl"/>
       </geometry>
@@ -331,7 +331,7 @@
     </visual>
     <!-- Part extruded_0_1 -->
     <visual>
-      <origin xyz="-0.0362954 0.0860118 0.0764594" rpy="2.35619 -2.01031e-14 0.523599"/>
+      <origin xyz="-0.0926361 0.0115732 0.0764594" rpy="2.35619 -2.01031e-14 1.5708"/>
       <geometry>
         <mesh filename="package://assets/extruded_0_1.stl"/>
       </geometry>
@@ -341,7 +341,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_4 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__3.stl"/>
       </geometry>
@@ -351,7 +351,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4.stl"/>
       </geometry>
@@ -361,7 +361,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1.stl"/>
       </geometry>
@@ -371,7 +371,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1.stl"/>
       </geometry>
@@ -381,7 +381,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_5 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap.stl"/>
       </geometry>
@@ -391,7 +391,7 @@
     </visual>
     <!-- Part extruded_4_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4.stl"/>
       </geometry>
@@ -401,7 +401,7 @@
     </visual>
     <!-- Part extruded_4_3_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_3.stl"/>
       </geometry>
@@ -411,7 +411,7 @@
     </visual>
     <!-- Part extruded_4_3_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_3.stl"/>
       </geometry>
@@ -421,7 +421,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6.stl"/>
       </geometry>
@@ -431,7 +431,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_6.stl"/>
       </geometry>
@@ -441,7 +441,7 @@
     </visual>
     <!-- Part extruded_6_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_6.stl"/>
       </geometry>
@@ -451,7 +451,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2.stl"/>
       </geometry>
@@ -461,7 +461,7 @@
     </visual>
     <!-- Part cra_ri30_40_pro_xx_后盖_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 6.00895e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 6.00895e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_pro_xx_后盖.stl"/>
       </geometry>
@@ -471,7 +471,7 @@
     </visual>
     <!-- Part extruded_0_1_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_0_1.stl"/>
       </geometry>
@@ -481,7 +481,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_b_电机壳_1_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_b_电机壳_1.stl"/>
       </geometry>
@@ -491,7 +491,7 @@
     </visual>
     <!-- Part extruded_0_1_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_0_1.stl"/>
       </geometry>
@@ -501,7 +501,7 @@
     </visual>
     <!-- Part extruded_1_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_1__2.stl"/>
       </geometry>
@@ -511,7 +511,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n.stl"/>
       </geometry>
@@ -521,7 +521,7 @@
     </visual>
     <!-- Part extruded_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded.stl"/>
       </geometry>
@@ -531,7 +531,7 @@
     </visual>
     <!-- Part extruded_2_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_2.stl"/>
       </geometry>
@@ -541,7 +541,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_6 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__2.stl"/>
       </geometry>
@@ -551,7 +551,7 @@
     </visual>
     <!-- Part extruded_4_4_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_4.stl"/>
       </geometry>
@@ -561,7 +561,7 @@
     </visual>
     <!-- Part extruded_1_4 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_1.stl"/>
       </geometry>
@@ -571,7 +571,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_柔轮盖_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_柔轮盖.stl"/>
       </geometry>
@@ -581,7 +581,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_2.stl"/>
       </geometry>
@@ -591,7 +591,7 @@
     </visual>
     <!-- Part extruded_6_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_6.stl"/>
       </geometry>
@@ -601,7 +601,7 @@
     </visual>
     <!-- Part extruded_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded.stl"/>
       </geometry>
@@ -611,7 +611,7 @@
     </visual>
     <!-- Part lsg_8_减速器外圈固定_1_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/lsg_8_减速器外圈固定_1.stl"/>
       </geometry>
@@ -621,7 +621,7 @@
     </visual>
     <!-- Part lsg_08_柔轮_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/lsg_08_柔轮.stl"/>
       </geometry>
@@ -631,7 +631,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_柔轮盖_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_柔轮盖.stl"/>
       </geometry>
@@ -641,7 +641,7 @@
     </visual>
     <!-- Part extruded_5_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_5.stl"/>
       </geometry>
@@ -651,7 +651,7 @@
     </visual>
     <!-- Part extruded_5_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_5.stl"/>
       </geometry>
@@ -661,7 +661,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n.stl"/>
       </geometry>
@@ -671,7 +671,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3.stl"/>
       </geometry>
@@ -681,7 +681,7 @@
     </visual>
     <!-- Part extruded_1_5 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_1__2.stl"/>
       </geometry>
@@ -691,7 +691,7 @@
     </visual>
     <!-- Part extruded_4_2_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_2.stl"/>
       </geometry>
@@ -701,7 +701,7 @@
     </visual>
     <!-- Part b08_cra_ri30_40_pro_xx_客户参考_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/b08_cra_ri30_40_pro_xx_客户参考.stl"/>
       </geometry>
@@ -711,7 +711,7 @@
     </visual>
     <!-- Part cra_ri30_40_xx_b_电机壳_1_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_xx_b_电机壳_1.stl"/>
       </geometry>
@@ -721,7 +721,7 @@
     </visual>
     <!-- Part extruded_1_6 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_1.stl"/>
       </geometry>
@@ -731,7 +731,7 @@
     </visual>
     <!-- Part extruded_0_2 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_0.stl"/>
       </geometry>
@@ -741,7 +741,7 @@
     </visual>
     <!-- Part lsg_08_柔轮_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/lsg_08_柔轮.stl"/>
       </geometry>
@@ -751,7 +751,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_7 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__3.stl"/>
       </geometry>
@@ -761,7 +761,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n.stl"/>
       </geometry>
@@ -771,7 +771,7 @@
     </visual>
     <!-- Part extruded_4_1_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_1.stl"/>
       </geometry>
@@ -781,7 +781,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_1.stl"/>
       </geometry>
@@ -791,7 +791,7 @@
     </visual>
     <!-- Part b08_cra_ri30_40_pro_xx_客户参考_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/b08_cra_ri30_40_pro_xx_客户参考.stl"/>
       </geometry>
@@ -801,7 +801,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5.stl"/>
       </geometry>
@@ -811,7 +811,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_8 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap__2.stl"/>
       </geometry>
@@ -821,7 +821,7 @@
     </visual>
     <!-- Part extruded_4_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4.stl"/>
       </geometry>
@@ -831,7 +831,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_1.stl"/>
       </geometry>
@@ -841,7 +841,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_3.stl"/>
       </geometry>
@@ -851,7 +851,7 @@
     </visual>
     <!-- Part extruded_4_2_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_2.stl"/>
       </geometry>
@@ -861,7 +861,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_5.stl"/>
       </geometry>
@@ -871,7 +871,7 @@
     </visual>
     <!-- Part user_library_0805_2012m__cap_9 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/user_library_0805_2012m__cap.stl"/>
       </geometry>
@@ -881,7 +881,7 @@
     </visual>
     <!-- Part cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cross_recessed_countersunk_head_screws_gb1_gb_cross_screws_type4_m2x10_8_8__h_type_n_4.stl"/>
       </geometry>
@@ -891,7 +891,7 @@
     </visual>
     <!-- Part extruded_0_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_0.stl"/>
       </geometry>
@@ -901,7 +901,7 @@
     </visual>
     <!-- Part hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/hexagon_socket_head_cap_screws_gb_gb_fastener_screws_hshcs_m2x20_n.stl"/>
       </geometry>
@@ -911,7 +911,7 @@
     </visual>
     <!-- Part extruded_4_4_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_4.stl"/>
       </geometry>
@@ -921,7 +921,7 @@
     </visual>
     <!-- Part extruded_4_5_2 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_5.stl"/>
       </geometry>
@@ -931,7 +931,7 @@
     </visual>
     <!-- Part lsg_8_减速器外圈固定_1_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.607e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.607e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/lsg_8_减速器外圈固定_1.stl"/>
       </geometry>
@@ -941,7 +941,7 @@
     </visual>
     <!-- Part cra_ri30_40_pro_xx_后盖_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/cra_ri30_40_pro_xx_后盖.stl"/>
       </geometry>
@@ -951,7 +951,7 @@
     </visual>
     <!-- Part extruded_2_3 -->
     <visual>
-      <origin xyz="0.0926361 -0.0115732 0.0764594" rpy="2.35619 3.18634e-14 -1.5708"/>
+      <origin xyz="0.0563407 0.0744386 0.0764594" rpy="2.35619 3.18634e-14 -0.523599"/>
       <geometry>
         <mesh filename="package://assets/extruded_2.stl"/>
       </geometry>
@@ -961,7 +961,7 @@
     </visual>
     <!-- Part extruded_4_5_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_5.stl"/>
       </geometry>
@@ -971,7 +971,7 @@
     </visual>
     <!-- Part extruded_4_1_3 -->
     <visual>
-      <origin xyz="-0.0563407 -0.0744386 0.0764594" rpy="2.35619 1.99341e-16 2.61799"/>
+      <origin xyz="0.0362954 -0.0860118 0.0764594" rpy="2.35619 1.99341e-16 -2.61799"/>
       <geometry>
         <mesh filename="package://assets/extruded_4_1.stl"/>
       </geometry>
@@ -999,7 +999,7 @@
     </visual>
     <!-- Part 2_arbremoteur3 -->
     <visual>
-      <origin xyz="0.0115732 -0.04 0.0184386" rpy="-1.5708 1.47104e-17 3.82363e-17"/>
+      <origin xyz="0.0115732 -0.04 0.0184386" rpy="-1.5708 1.14939e-30 -8.75143e-31"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
@@ -1008,7 +1008,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0115732 -0.04 0.0184386" rpy="-1.5708 1.47104e-17 3.82363e-17"/>
+      <origin xyz="0.0115732 -0.04 0.0184386" rpy="-1.5708 1.14939e-30 -8.75143e-31"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
@@ -1027,13 +1027,13 @@
   <!-- Link 3_lien2 -->
   <link name="3_lien2">
     <inertial>
-      <origin xyz="0.0134514 -0.0076472 -0.0217923" rpy="0 0 0"/>
+      <origin xyz="0.0153881 0.00162035 -0.0217923" rpy="0 0 0"/>
       <mass value="0.0118051"/>
-      <inertia ixx="3.95953e-06" ixy="5.24709e-07" ixz="1.30165e-06" iyy="4.53315e-06" iyz="-9.65084e-07" izz="1.52639e-06"/>
+      <inertia ixx="3.6573e-06" ixy="-1.03018e-07" ixz="1.62019e-06" iyy="4.83538e-06" iyz="-2.61509e-08" izz="1.52639e-06"/>
     </inertial>
     <!-- Part dbtm3_14_5_2 -->
     <visual>
-      <origin xyz="0.016756 -0.0120092 -0.0478913" rpy="3.14159 0.25268 -0.621854"/>
+      <origin xyz="0.0206151 2.22045e-15 -0.0478913" rpy="3.14159 0.25268 9.10057e-15"/>
       <geometry>
         <mesh filename="package://assets/dbtm3_14_5.stl"/>
       </geometry>
@@ -1043,7 +1043,7 @@
     </visual>
     <!-- Part sfl676zz_2 -->
     <visual>
-      <origin xyz="6.93889e-18 -6.93889e-18 -0.0046" rpy="-2.51974 1.5708 0"/>
+      <origin xyz="-2.77556e-17 1.38778e-17 -0.0046" rpy="3.14159 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1053,7 +1053,7 @@
     </visual>
     <!-- Part sfl676zz_3 -->
     <visual>
-      <origin xyz="0.0191169 -0.0137013 -0.0486413" rpy="3.70808e-15 -0.25268 2.51974"/>
+      <origin xyz="0.0235199 2.24126e-15 -0.0486413" rpy="9.03006e-15 -0.25268 -3.14159"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1063,7 +1063,7 @@
     </visual>
     <!-- Part 3_lien2 -->
     <visual>
-      <origin xyz="0.0171509 0.0783671 0.0172703" rpy="-2.81984 -0.659058 -0.621854"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 8.2896e-15"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
@@ -1072,14 +1072,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0171509 0.0783671 0.0172703" rpy="-2.81984 -0.659058 -0.621854"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 8.2896e-15"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2 -->
     <visual>
-      <origin xyz="1.38778e-17 -6.93889e-18 -0.0085" rpy="-3.14159 1.70271e-14 -0.621854"/>
+      <origin xyz="-2.77556e-17 1.38778e-17 -0.0085" rpy="3.14159 9.0895e-15 6.96076e-15"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1091,13 +1091,13 @@
   <!-- Link 4_supporthead -->
   <link name="4_supporthead">
     <inertial>
-      <origin xyz="-0.0196146 -0.0058501 0.0084229" rpy="0 0 0"/>
+      <origin xyz="-0.0158547 -0.0129454 0.0084229" rpy="0 0 0"/>
       <mass value="0.0273657"/>
-      <inertia ixx="6.91382e-06" ixy="5.69485e-07" ixz="1.99253e-06" iyy="5.17425e-06" iyz="5.94281e-07" izz="7.08366e-06"/>
+      <inertia ixx="6.25196e-06" ixy="1.01863e-06" ixz="1.61059e-06" iyy="5.8361e-06" iyz="1.31505e-06" izz="7.08366e-06"/>
     </inertial>
     <!-- Part 4_supporthead -->
     <visual>
-      <origin xyz="0.074509 0.0487789 0.0745559" rpy="-2.81984 0.659058 -0.394868"/>
+      <origin xyz="0.0500108 0.0736879 0.0745559" rpy="-2.81984 0.659058 -1.44144e-14"/>
       <geometry>
         <mesh filename="package://assets/4_supporthead.stl"/>
       </geometry>
@@ -1107,7 +1107,7 @@
     </visual>
     <!-- Part sfl676zz_4 -->
     <visual>
-      <origin xyz="4.21885e-15 -8.62158e-15 -0.0026" rpy="-2.74672 1.5708 0"/>
+      <origin xyz="9.16628e-15 2.98372e-15 -0.0026" rpy="-3.14159 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1117,7 +1117,7 @@
     </visual>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2_2 -->
     <visual>
-      <origin xyz="4.20497e-15 -8.62851e-15 -0.0065" rpy="-3.79223e-14 1.9327e-14 -0.394868"/>
+      <origin xyz="9.17322e-15 2.98372e-15 -0.0065" rpy="1.13424e-14 5.08248e-15 -1.16676e-14"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1127,7 +1127,7 @@
     </visual>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2_3 -->
     <visual>
-      <origin xyz="-0.019242 -0.0283549 0.0200434" rpy="-1.24905 0.659058 -0.394868"/>
+      <origin xyz="-0.00685348 -0.033575 0.0200434" rpy="-1.24905 0.659058 2.29931e-14"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1137,7 +1137,7 @@
     </visual>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2_4 -->
     <visual>
-      <origin xyz="-0.0316304 0.0131822 0.0200434" rpy="-1.57528e-13 1.31812 -0.394868"/>
+      <origin xyz="-0.0342674 -6.59195e-16 0.0200434" rpy="3.39119e-14 1.31812 -1.04307e-14"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1147,7 +1147,7 @@
     </visual>
     <!-- Part sfl676zz_5 -->
     <visual>
-      <origin xyz="-0.0171215 -0.0252303 0.0210184" rpy="0.886077 0.25268 -2.16702"/>
+      <origin xyz="-0.00609825 -0.0298752 0.0210184" rpy="0.886077 0.25268 -1.77215"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1157,7 +1157,7 @@
     </visual>
     <!-- Part sfl676zz_6 -->
     <visual>
-      <origin xyz="-0.0281448 0.0117296 0.0210184" rpy="4.05463e-14 0.25268 2.74672"/>
+      <origin xyz="-0.0304912 -4.85723e-16 0.0210184" rpy="-9.23743e-15 0.25268 -3.14159"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1176,7 +1176,7 @@
     </inertial>
   </link>
   <joint name="effector_frame" type="fixed">
-    <origin xyz="-0.0227072 -0.00677243 0.0051956" rpy="2.42787 -0.361367 -1.66854"/>
+    <origin xyz="-0.0183545 -0.0149864 0.0051956" rpy="2.42787 -0.361367 -1.27367"/>
     <parent link="4_supporthead"/>
     <child link="effector"/>
     <axis xyz="0 0 0"/>
@@ -1191,7 +1191,7 @@
     </inertial>
   </link>
   <joint name="closing_m1_p2_2_frame" type="fixed">
-    <origin xyz="-0.0258211 0.0107611 0.0216684" rpy="-1.82348 4.07601e-14 1.17593"/>
+    <origin xyz="-0.0279738 -5.82867e-16 0.0216684" rpy="-1.82348 -7.45088e-15 1.5708"/>
     <parent link="4_supporthead"/>
     <child link="closing_m1_p2_2"/>
     <axis xyz="0 0 0"/>
@@ -1206,14 +1206,14 @@
     </inertial>
   </link>
   <joint name="closing_m3_p2_2_frame" type="fixed">
-    <origin xyz="-0.0157079 -0.0231472 0.0216684" rpy="1.95839 -0.848062 -0.893349"/>
+    <origin xyz="-0.00559476 -0.0274086 0.0216684" rpy="1.95839 -0.848062 -0.49848"/>
     <parent link="4_supporthead"/>
     <child link="closing_m3_p2_2"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from 3_lien2 to 4_supporthead -->
   <joint name="m2_p2" type="revolute">
-    <origin xyz="0.0227371 -0.0162959 -0.0497913" rpy="-1.13637e-14 -1.31812 -0.621854"/>
+    <origin xyz="0.0279738 2.2829e-15 -0.0497913" rpy="-3.36345e-14 -1.31812 6.54005e-15"/>
     <parent link="3_lien2"/>
     <child link="4_supporthead"/>
     <axis xyz="0 0 1"/>
@@ -1229,7 +1229,7 @@
   </joint>
   <!-- Joint from moteur_bati_v2 to 2_arbremoteur3 -->
   <joint name="m1" type="revolute">
-    <origin xyz="-0.0256569 0.044439 0.0612132" rpy="2.39619 0.275486 -2.33141"/>
+    <origin xyz="-0.0513137 2.95076e-15 0.0612132" rpy="2.35619 -9.97813e-15 -1.5708"/>
     <parent link="moteur_bati_v2"/>
     <child link="2_arbremoteur3"/>
     <axis xyz="0 0 1"/>
@@ -1238,13 +1238,13 @@
   <!-- Link 2_arbremoteur3_2 -->
   <link name="2_arbremoteur3_2">
     <inertial>
-      <origin xyz="-0.00646212 0.0125454 -0.0175921" rpy="0 0 0"/>
+      <origin xyz="-0.0107909 0.00909413 -0.0175921" rpy="0 0 0"/>
       <mass value="0.0293635"/>
-      <inertia ixx="2.09601e-05" ixy="3.69351e-06" ixz="-3.64957e-06" iyy="1.46089e-05" iyz="9.38815e-06" izz="1.24115e-05"/>
+      <inertia ixx="1.73972e-05" ixy="4.85555e-06" ixz="-6.98022e-06" iyy="1.81718e-05" iyz="7.26176e-06" izz="1.24115e-05"/>
     </inertial>
     <!-- Part dbtm3_14_5_3 -->
     <visual>
-      <origin xyz="-0.0138833 0.0465492 -0.0600264" rpy="-1.36944 0.25268 -1.28095"/>
+      <origin xyz="-0.0307218 0.0376264 -0.0600264" rpy="-1.36944 0.25268 -0.886077"/>
       <geometry>
         <mesh filename="package://assets/dbtm3_14_5.stl"/>
       </geometry>
@@ -1254,7 +1254,7 @@
     </visual>
     <!-- Part 2_arbremoteur3_2 -->
     <visual>
-      <origin xyz="0.00470488 0.0413739 0.0184386" rpy="-1.5708 -1.51888e-14 2.74672"/>
+      <origin xyz="-0.0115732 0.04 0.0184386" rpy="-1.5708 -9.02412e-15 3.14159"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
@@ -1263,14 +1263,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00470488 0.0413739 0.0184386" rpy="-1.5708 -1.51888e-14 2.74672"/>
+      <origin xyz="-0.0115732 0.04 0.0184386" rpy="-1.5708 -9.02412e-15 3.14159"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
     </collision>
     <!-- Part sfl676zz_7 -->
     <visual>
-      <origin xyz="-0.0130531 0.0437657 -0.0607764" rpy="-1.77215 -0.25268 1.86065"/>
+      <origin xyz="-0.0288847 0.0353764 -0.0607764" rpy="-1.77215 -0.25268 2.25552"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1282,13 +1282,13 @@
   <!-- Link 3_lien2_2 -->
   <link name="3_lien2_2">
     <inertial>
-      <origin xyz="0.0134514 -0.0076472 -0.0217923" rpy="0 0 0"/>
+      <origin xyz="0.0153881 0.00162035 -0.0217923" rpy="0 0 0"/>
       <mass value="0.0118051"/>
-      <inertia ixx="3.95953e-06" ixy="5.24709e-07" ixz="1.30165e-06" iyy="4.53315e-06" iyz="-9.65084e-07" izz="1.52639e-06"/>
+      <inertia ixx="3.6573e-06" ixy="-1.03018e-07" ixz="1.62019e-06" iyy="4.83538e-06" iyz="-2.61509e-08" izz="1.52639e-06"/>
     </inertial>
     <!-- Part dbtm3_14_5_4 -->
     <visual>
-      <origin xyz="0.016756 -0.0120092 -0.0478913" rpy="-3.14159 0.25268 -0.621854"/>
+      <origin xyz="0.0206151 1.70697e-15 -0.0478913" rpy="3.14159 0.25268 -1.37782e-14"/>
       <geometry>
         <mesh filename="package://assets/dbtm3_14_5.stl"/>
       </geometry>
@@ -1298,7 +1298,7 @@
     </visual>
     <!-- Part sfl676zz_8 -->
     <visual>
-      <origin xyz="0 -2.77556e-17 -0.0046" rpy="-2.51974 1.5708 0"/>
+      <origin xyz="-6.93889e-18 0 -0.0046" rpy="-3.14159 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1308,7 +1308,7 @@
     </visual>
     <!-- Part sfl676zz_9 -->
     <visual>
-      <origin xyz="0.0191169 -0.0137013 -0.0486413" rpy="-1.79279e-14 -0.25268 2.51974"/>
+      <origin xyz="0.0235199 1.66533e-15 -0.0486413" rpy="-2.78626e-15 -0.25268 3.14159"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1318,7 +1318,7 @@
     </visual>
     <!-- Part 3_lien2_2 -->
     <visual>
-      <origin xyz="0.0171509 0.0783671 0.0172703" rpy="-2.81984 -0.659058 -0.621854"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -1.54845e-14"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
@@ -1327,14 +1327,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0171509 0.0783671 0.0172703" rpy="-2.81984 -0.659058 -0.621854"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -1.54845e-14"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2_5 -->
     <visual>
-      <origin xyz="6.93889e-18 -2.77556e-17 -0.0085" rpy="-3.14159 -1.57666e-14 -0.621854"/>
+      <origin xyz="0 -6.93889e-18 -0.0085" rpy="3.14159 3.02103e-15 -3.1485e-14"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1353,14 +1353,14 @@
     </inertial>
   </link>
   <joint name="closing_m3_p2_1_frame" type="fixed">
-    <origin xyz="0.0227371 -0.0162959 -0.0497913" rpy="-3.14159 -1.31812 -0.621854"/>
+    <origin xyz="0.0279738 1.6237e-15 -0.0497913" rpy="-3.14159 -1.31812 -1.81564e-14"/>
     <parent link="3_lien2_2"/>
     <child link="closing_m3_p2_1"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from 2_arbremoteur3_2 to 3_lien2_2 -->
   <joint name="m2_p1" type="revolute">
-    <origin xyz="-0.0117802 0.0394975 -0.0619264" rpy="1.31313 0.19488 -2.90273"/>
+    <origin xyz="-0.0260678 0.0319264 -0.0619264" rpy="1.31313 0.19488 -2.50786"/>
     <parent link="2_arbremoteur3_2"/>
     <child link="3_lien2_2"/>
     <axis xyz="0 0 1"/>
@@ -1368,7 +1368,7 @@
   </joint>
   <!-- Joint from moteur_bati_v2 to 2_arbremoteur3_2 -->
   <joint name="m2" type="revolute">
-    <origin xyz="-0.0256569 -0.044439 0.0612132" rpy="-2.35619 1.99341e-16 2.61799"/>
+    <origin xyz="0.0256569 -0.044439 0.0612132" rpy="-2.35619 1.99341e-16 -2.61799"/>
     <parent link="moteur_bati_v2"/>
     <child link="2_arbremoteur3_2"/>
     <axis xyz="0 0 1"/>
@@ -1377,13 +1377,13 @@
   <!-- Link 2_arbremoteur3_3 -->
   <link name="2_arbremoteur3_3">
     <inertial>
-      <origin xyz="-0.00646212 0.0125454 -0.0175921" rpy="0 0 0"/>
+      <origin xyz="-0.0107909 0.00909413 -0.0175921" rpy="0 0 0"/>
       <mass value="0.0293635"/>
-      <inertia ixx="2.09601e-05" ixy="3.69351e-06" ixz="-3.64957e-06" iyy="1.46089e-05" iyz="9.38815e-06" izz="1.24115e-05"/>
+      <inertia ixx="1.73972e-05" ixy="4.85555e-06" ixz="-6.98022e-06" iyy="1.81718e-05" iyz="7.26176e-06" izz="1.24115e-05"/>
     </inertial>
     <!-- Part dbtm3_14_5_5 -->
     <visual>
-      <origin xyz="-0.0138833 0.0465492 -0.0600264" rpy="-1.36944 0.25268 -1.28095"/>
+      <origin xyz="-0.0307218 0.0376264 -0.0600264" rpy="-1.36944 0.25268 -0.886077"/>
       <geometry>
         <mesh filename="package://assets/dbtm3_14_5.stl"/>
       </geometry>
@@ -1393,7 +1393,7 @@
     </visual>
     <!-- Part 2_arbremoteur3_3 -->
     <visual>
-      <origin xyz="0.00470488 0.0413739 0.0184386" rpy="-1.5708 -1.07529e-14 2.74672"/>
+      <origin xyz="-0.0115732 0.04 0.0184386" rpy="-1.5708 -9.09611e-16 3.14159"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
@@ -1402,14 +1402,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00470488 0.0413739 0.0184386" rpy="-1.5708 -1.07529e-14 2.74672"/>
+      <origin xyz="-0.0115732 0.04 0.0184386" rpy="-1.5708 -9.09611e-16 3.14159"/>
       <geometry>
         <mesh filename="package://assets/2_arbremoteur3.stl"/>
       </geometry>
     </collision>
     <!-- Part sfl676zz_10 -->
     <visual>
-      <origin xyz="-0.0130531 0.0437657 -0.0607764" rpy="-1.77215 -0.25268 1.86065"/>
+      <origin xyz="-0.0288847 0.0353764 -0.0607764" rpy="-1.77215 -0.25268 2.25552"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1427,7 +1427,7 @@
     </inertial>
     <!-- Part dbtm3_14_5_6 -->
     <visual>
-      <origin xyz="0.0206151 2.00187e-15 -0.0478913" rpy="3.14159 0.25268 4.6298e-16"/>
+      <origin xyz="0.0206151 2.01922e-15 -0.0478913" rpy="-3.14159 0.25268 1.30264e-15"/>
       <geometry>
         <mesh filename="package://assets/dbtm3_14_5.stl"/>
       </geometry>
@@ -1437,7 +1437,7 @@
     </visual>
     <!-- Part sfl676zz_11 -->
     <visual>
-      <origin xyz="6.93889e-18 -3.46945e-18 -0.0046" rpy="3.14159 1.5708 0"/>
+      <origin xyz="1.38778e-17 -4.85723e-17 -0.0046" rpy="3.14159 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1447,7 +1447,7 @@
     </visual>
     <!-- Part sfl676zz_12 -->
     <visual>
-      <origin xyz="0.0235199 2.00187e-15 -0.0486413" rpy="2.546e-15 -0.25268 -3.14159"/>
+      <origin xyz="0.0235199 2.01228e-15 -0.0486413" rpy="-1.22286e-15 -0.25268 -3.14159"/>
       <geometry>
         <mesh filename="package://assets/sfl676zz.stl"/>
       </geometry>
@@ -1457,7 +1457,7 @@
     </visual>
     <!-- Part 3_lien2_3 -->
     <visual>
-      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -2.62485e-17"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -3.26688e-17"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
@@ -1466,14 +1466,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -2.62485e-17"/>
+      <origin xyz="-0.031712 0.0736879 0.0172703" rpy="-2.81984 -0.659058 -3.26688e-17"/>
       <geometry>
         <mesh filename="package://assets/3_lien2.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2_6 -->
     <visual>
-      <origin xyz="6.93889e-18 -1.38778e-17 -0.0085" rpy="3.14159 -7.7139e-15 1.19198e-14"/>
+      <origin xyz="0 6.93889e-18 -0.0085" rpy="3.14159 2.50939e-14 6.60272e-15"/>
       <geometry>
         <mesh filename="package://assets/hex_thin_nut_grade_a___b_m3__1f32078b7141c356c1ef5a853a7893b2.stl"/>
       </geometry>
@@ -1492,14 +1492,14 @@
     </inertial>
   </link>
   <joint name="closing_m1_p2_1_frame" type="fixed">
-    <origin xyz="0.0279738 2.02616e-15 -0.0497913" rpy="-3.14159 -1.31812 -1.44912e-15"/>
+    <origin xyz="0.0279738 2.02616e-15 -0.0497913" rpy="-3.14159 -1.31812 -1.62357e-15"/>
     <parent link="3_lien2_3"/>
     <child link="closing_m1_p2_1"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from 2_arbremoteur3_3 to 3_lien2_3 -->
   <joint name="m3_p1" type="revolute">
-    <origin xyz="-0.0117802 0.0394975 -0.0619264" rpy="1.20784 0.789565 -3.11514"/>
+    <origin xyz="-0.0260678 0.0319264 -0.0619264" rpy="1.31313 0.19488 -2.50786"/>
     <parent link="2_arbremoteur3_3"/>
     <child link="3_lien2_3"/>
     <axis xyz="0 0 1"/>
@@ -1507,7 +1507,7 @@
   </joint>
   <!-- Joint from moteur_bati_v2 to 2_arbremoteur3_3 -->
   <joint name="m3" type="revolute">
-    <origin xyz="0.0513137 2.63504e-15 0.0612132" rpy="-2.35619 3.18634e-14 -1.5708"/>
+    <origin xyz="0.0256569 0.044439 0.0612132" rpy="-2.35619 3.18634e-14 -0.523599"/>
     <parent link="moteur_bati_v2"/>
     <child link="2_arbremoteur3_3"/>
     <axis xyz="0 0 1"/>
