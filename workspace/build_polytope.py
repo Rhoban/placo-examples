@@ -1,4 +1,5 @@
 import numpy as np
+import pickle
 import random
 import tqdm
 import placo
@@ -38,12 +39,7 @@ class PointCloud:
             self.normals[k] = new_normal
 
 
-import pickle
-
 points = np.array(pickle.load(open("points.pkl", "rb")))
-
-points = np.array(points)
-
 points_cloud = PointCloud(points)
 
 print(f"Optimizing point normals")
