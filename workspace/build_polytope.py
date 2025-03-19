@@ -3,7 +3,6 @@ import random
 import tqdm
 import placo
 from polytope import Polytope
-import matplotlib.pyplot as plt
 
 
 class PointCloud:
@@ -11,7 +10,6 @@ class PointCloud:
         self.points = points
         self.normals = points.copy()
         self.normals /= np.linalg.norm(self.normals, axis=1).reshape(-1, 1)
-        self.init_b = None
 
     def build_polytope(self):
         A = self.normals.copy()
