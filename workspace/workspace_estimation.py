@@ -12,7 +12,7 @@ increasing distances until a the target is either unreachable or collision occur
 # Whether to debug (Meshcat viewer)
 debug = False
 # How many directions are used
-n_directions = 256
+n_directions = 512
 
 robot = placo.RobotWrapper("../models/spm/")
 robot.load_collision_pairs("../models/spm/collision_pairs.json")
@@ -88,17 +88,14 @@ def find_highest_distance(direction, max_distance=2):
 
 import tqdm
 
-A = []
-b = []
+points = []
 directions = placo.directions_3d(n_directions)
+
+print(f"Sampling workspace, using {n_directions} directions")
 for direction in tqdm.tqdm(directions):
     dist = find_highest_distance(direction)
-    A.append(direction)
-    b.append(dist - 1e-2)
+    points.append(direction * dist)
 
-from polytope import Polytope
+import pickle
 
-polytope = Polytope(A, b)
-polytope.show(show_points=True)
-polytope.simplify()
-polytope.save("workspace.pkl")
+pickle.dump(points, open("points.pkl", "wb"))
