@@ -1,21 +1,11 @@
 import time
 import placo
-import argparse
 import numpy as np
 import warnings
-from placo_utils.visualization import (
-    robot_viz,
-    frame_viz,
-    line_viz,
-    footsteps_viz,
-)
+import matplotlib.pyplot as plt
+from footsteps_planner import draw_footsteps
 
 warnings.filterwarnings("ignore")
-
-parser = argparse.ArgumentParser(description="Process some integers.")
-parser.add_argument("-p", "--pybullet", action="store_true", help="PyBullet simulation")
-parser.add_argument("-m", "--meshcat", action="store_true", help="MeshCat visualization")
-args = parser.parse_args()
 
 DT = 0.005
 model_filename = "../models/sigmaban/robot.urdf"
@@ -107,91 +97,22 @@ footsteps = repetitive_footsteps_planner.plan(placo.HumanoidRobot_Side.left, T_w
 
 supports = placo.FootstepsPlanner.make_supports(footsteps, 0.0, True, parameters.has_double_support(), True)
 
-# Creating the pattern generator and making an initial plan
+# Creating the pattern generator and planning
 walk = placo.WalkPatternGenerator(robot, parameters)
 trajectory = walk.plan(supports, robot.com_world(), 0.0)
 
-if args.pybullet:
-    # Loading the PyBullet simulation
-    import pybullet as p
-    from onshape_to_robot.simulation import Simulation
+# Plotting the trajectory
+draw_footsteps(trajectory.get_supports(), show=False)
 
-    sim = Simulation(model_filename, realTime=True, dt=DT)
-elif args.meshcat:
-    # Starting Meshcat viewer
-    viz = robot_viz(robot)
-    footsteps_viz(trajectory.get_supports())
-else:
-    print("No visualization selected, use either -p or -m")
-    exit()
+ts = np.linspace(0, trajectory.t_end, 1000)
+com = np.array([trajectory.get_p_world_CoM(t)[:2] for t in ts]).T
+zmp = np.array([trajectory.get_p_world_ZMP(t, placo.LIPM.compute_omega(parameters.walk_com_height)) for t in ts]).T
+dcm = np.array([trajectory.get_p_world_DCM(t, placo.LIPM.compute_omega(parameters.walk_com_height)) for t in ts]).T
 
-# Timestamps
-start_t = time.time()
-initial_delay = -2.0 if args.pybullet or args.meshcat else 0.0
-t = initial_delay
-last_display = time.time()
-last_replan = 0
+plt.plot(com[0], com[1], label="CoM", c="tab:red", lw=3)    
+plt.plot(zmp[0], zmp[1], label="ZMP", c="tab:blue", lw=3)
+plt.plot(dcm[0], dcm[1], label="DCM", c="tab:green", lw=3)
 
-while True:
-    # Updating the QP tasks from planned trajectory
-    tasks.update_tasks_from_trajectory(trajectory, t)
-
-    # Invoking the IK QP solver
-    robot.update_kinematics()
-    qd_sol = solver.solve(True)
-
-    # Ensuring the robot is kinematically placed on the floor on the proper foot to avoid integration drifts
-    if not trajectory.support_is_both(t):
-        robot.update_support_side(str(trajectory.support_side(t)))
-        robot.ensure_on_floor()
-
-    # If enough time elapsed and we can replan, do the replanning
-    if (t - last_replan > parameters.replan_timesteps * parameters.dt() and walk.can_replan_supports(trajectory, t)):
-        # Replanning footsteps from current trajectory
-        supports = walk.replan_supports(repetitive_footsteps_planner, trajectory, t, last_replan)
-
-        last_replan = t
-
-        # Replanning CoM trajectory, yielding a new trajectory we can switch to
-        trajectory = walk.replan(supports, trajectory, t)
-
-        if args.meshcat:
-            # Drawing footsteps
-            footsteps_viz(supports)
-
-            # Drawing planned CoM trajectory on the ground
-            coms = [[*trajectory.get_p_world_CoM(t)[:2], 0.0]
-                for t in np.linspace(trajectory.t_start, trajectory.t_end, 100)]
-            line_viz("CoM_trajectory", np.array(coms), 0xFFAA00)
-
-    # During the warmup phase, the robot is enforced to stay in the initial position
-    if args.pybullet:
-        if t < -2:
-            T_left_origin = sim.transformation("origin", "left_foot_frame")
-            T_world_left = sim.poseToMatrix(([0.0, 0.0, 0.05], [0.0, 0.0, 0.0, 1.0]))
-            T_world_origin = T_world_left @ T_left_origin
-
-            sim.setRobotPose(*sim.matrixToPose(T_world_origin))
-
-        joints = {joint: robot.get_joint(joint) for joint in sim.getJoints()}
-        applied = sim.setJoints(joints)
-        sim.tick()
-
-    # Updating meshcat display periodically
-    elif args.meshcat:
-        if time.time() - last_display > 0.03:
-            last_display = time.time()
-            viz.display(robot.state.q)
-
-            frame_viz("left_foot_target", trajectory.get_T_world_left(t))
-            frame_viz("right_foot_target", trajectory.get_T_world_right(t))
-
-            T_world_trunk = np.eye(4)
-            T_world_trunk[:3, :3] = trajectory.get_R_world_trunk(t)
-            T_world_trunk[:3, 3] = trajectory.get_p_world_CoM(t)
-            frame_viz("trunk_target", T_world_trunk)
-
-    # Spin-lock until the next tick
-    t += DT
-    while time.time() + initial_delay < start_t + t:
-        time.sleep(1e-3)
+plt.legend()
+plt.grid()
+plt.show()
