@@ -1,3 +1,4 @@
+import pinocchio
 import placo
 import time
 import tqdm
@@ -12,7 +13,7 @@ increasing distances until a the target is either unreachable or collision occur
 # Whether to debug (Meshcat viewer)
 debug = False
 # How many directions are used
-n_directions = 512
+n_directions = 256
 
 robot = placo.RobotWrapper("../models/spm/")
 robot.load_collision_pairs("../models/spm/collision_pairs.json")
