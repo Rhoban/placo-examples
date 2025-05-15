@@ -1,3 +1,4 @@
+import pinocchio
 import numpy as np
 from ischedule import schedule, run_loop
 import placo
