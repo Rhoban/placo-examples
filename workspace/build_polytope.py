@@ -21,10 +21,10 @@ class PointCloud:
 
     def optimize_normals(self) -> bool:
         for k in tqdm.tqdm(range(len(self.points))):
-            if len(self.points) > 256:
-                sample_points = np.array(random.choices(self.points, k=256))
-            else:
-                sample_points = self.points
+            # if len(self.points) > 1024:
+            #     sample_points = np.array(random.choices(self.points, k=256))
+            # else:
+            sample_points = self.points
             point = self.points[k]
             point_further = point + 1e-3 * point / np.linalg.norm(point)
             problem = placo.Problem()
