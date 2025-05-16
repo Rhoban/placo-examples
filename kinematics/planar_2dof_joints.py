@@ -1,3 +1,4 @@
+import pinocchio
 import placo
 import time
 import numpy as np

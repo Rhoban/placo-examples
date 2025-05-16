@@ -1,3 +1,4 @@
+import pinocchio
 import placo
 import time
 import numpy as np
@@ -52,7 +53,7 @@ def loop():
     t += dt
 
     orientation.R_world_frame = tf.rotation_matrix(
-        np.sin(t * 3) * 1.0, [0.0, 1.0, 0.0]
+        np.sin(t * 3) * 1.0, [1.0, 0.0, 0.0]
     )[:3, :3]
 
     robot.update_kinematics()
