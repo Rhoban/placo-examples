@@ -1,3 +1,4 @@
+import pinocchio
 import time
 import placo
 import argparse
