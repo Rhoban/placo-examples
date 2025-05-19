@@ -19,6 +19,7 @@ parser.add_argument("-m", "--meshcat", action="store_true", help="MeshCat visual
 args = parser.parse_args()
 
 DT = 0.005
+REPLAN_DT = 0.1
 model_filename = "../models/sigmaban/robot.urdf"
 
 # Loading the robot
@@ -33,7 +34,6 @@ parameters.single_support_timesteps = 10  # Number of planning timesteps per sin
 parameters.double_support_ratio = 0.0  # Ratio of double support (0.0 to 1.0)
 parameters.startend_double_support_ratio = 1.5  # Ratio duration of supports for starting and stopping walk
 parameters.planned_timesteps = 48  # Number of timesteps planned ahead
-parameters.replan_timesteps = 10  # Replanning each n timesteps
 
 # Posture parameters
 parameters.walk_com_height = 0.32  # Constant height for the CoM [m]
@@ -147,7 +147,7 @@ while True:
         robot.ensure_on_floor()
 
     # If enough time elapsed and we can replan, do the replanning
-    if (t - last_replan > parameters.replan_timesteps * parameters.dt() and walk.can_replan_supports(trajectory, t)):
+    if (t - last_replan > REPLAN_DT and walk.can_replan_supports(trajectory, t)):
         # Replanning footsteps from current trajectory
         supports = walk.replan_supports(repetitive_footsteps_planner, trajectory, t, last_replan)
 
