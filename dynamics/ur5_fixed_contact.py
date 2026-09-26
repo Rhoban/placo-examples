@@ -17,6 +17,7 @@ In this example, an UR5 arm is following a sinusoidal trajectory with a fixed co
 robot = placo.RobotWrapper("../models/ur5", placo.Flags.ignore_collisions)
 robot.update_kinematics()
 robot.set_T_world_frame("base", np.eye(4))
+robot.update_kinematics()
 
 # Creating the solver
 solver = placo.DynamicsSolver(robot)
