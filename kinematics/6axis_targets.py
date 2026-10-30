@@ -1,7 +1,5 @@
-import pinocchio
 import placo
 import numpy as np
-import pinocchio as pin
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
 
@@ -32,12 +30,12 @@ def update_target():
     global effector_task
 
     # Choose a random target
-    r = pin.exp6(np.array([0.0, 0.0, 0.0, *np.random.uniform([-1.0] * 3, [1.0] * 3)]))
-    t = pin.exp6(
+    r = placo.exp6(np.array([0.0, 0.0, 0.0, *np.random.uniform([-1.0] * 3, [1.0] * 3)]))
+    t = placo.exp6(
         np.array([*np.random.uniform([1.0, -1.0, 0.5], [1.5, 1.0, 1.2]), 0.0, 0.0, 0.0])
     )
 
-    effector_task.T_world_frame = np.array(t * r)
+    effector_task.T_world_frame = t @ r
 
 
 t = 0

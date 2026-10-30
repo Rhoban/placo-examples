@@ -1,7 +1,5 @@
-import pinocchio
 import time
 import numpy as np
-import pinocchio
 import placo
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz
