@@ -6,6 +6,7 @@ from placo_utils.visualization import (
     point_viz,
     tf,
     contacts_viz,
+    add_plot,
 )
 
 """
@@ -91,14 +92,19 @@ solver.remove_contact(puppet)
 
 viz = robot_viz(robot)
 
+# Plot of the vertical forces applied on the feet
+forces_plot = add_plot("Feet vertical forces [N]", ["left foot", "right foot"], window=10.0)
+plot_t = 0.0
+
 
 @schedule(interval=(1 / view_fps))
 def loop():
-    global t
+    global t, plot_t
 
     for _ in range(steps_per_view):
         t += solver.dt
         t = t % 10
+        plot_t += solver.dt
 
         com_task.target_world = com_trajectory.pos(t)
         right_foot_target = rightFoot_trajectory.pos(t)
@@ -107,6 +113,10 @@ def loop():
 
         robot.update_kinematics()
         solver.solve(True)
+
+        # Vertical forces (in the feet frames, which stay flat)
+        forces = [contact.wrench[2] if contact.active else 0.0 for contact in [left_contact, right_contact]]
+        forces_plot.add(plot_t, forces)
 
     # Viewing robot and contacts
     viz.display(robot.state.q)
