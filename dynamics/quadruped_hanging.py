@@ -14,7 +14,7 @@ All the dofs are not actuated (torque is set to zero), only one is controlled wi
 In results in an "hanging" robot.
 """
 
-robot = placo.RobotWrapper("../models/quadruped/")
+robot = placo.RobotWrapper("../models/quadruped/robot.urdf")
 
 # Putting the robot in a standing position
 robot.update_kinematics()

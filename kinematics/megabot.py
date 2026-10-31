@@ -8,7 +8,7 @@ from placo_utils.visualization import (
     frame_viz,
 )
 
-robot = placo.RobotWrapper("../models/megabot/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/megabot/robot.urdf", placo.Flags.ignore_collisions)
 
 # Updating joint limits and velocity limits
 for leg in range(1, 5):

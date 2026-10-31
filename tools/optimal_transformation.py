@@ -13,7 +13,7 @@ estimate the position of the floating base of the robot in the world.
 The supports in the world are moved to see the result of different fitting.
 """
 
-robot = placo.RobotWrapper("../models/megabot/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/megabot/robot.urdf", placo.Flags.ignore_collisions)
 robot.update_kinematics()
 
 viz = robot_viz(robot)

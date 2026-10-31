@@ -12,7 +12,7 @@ Spherical parallel manipulator, a 3 DoF
 - A single task controls the effector orientation
 """
 
-robot = placo.RobotWrapper("../models/spm/")
+robot = placo.RobotWrapper("../models/spm/robot.urdf")
 robot.update_kinematics()
 
 solver = placo.KinematicsSolver(robot)

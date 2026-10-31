@@ -12,7 +12,7 @@ Limits were computed using workspace_estimation.py, and stored in workspace.pkl.
 An orientation task is used, asking 
 """
 
-robot = placo.RobotWrapper("../models/spm/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/spm/robot.urdf", placo.Flags.ignore_collisions)
 
 solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)

@@ -1,7 +1,7 @@
 #include "example.h"
 
 SolverExample::SolverExample()
-    : robot("../models/6axis", placo::model::RobotWrapper::IGNORE_COLLISIONS),
+    : robot("../models/6axis/robot.urdf", placo::model::RobotWrapper::IGNORE_COLLISIONS),
       solver(robot) {
   // Masking floating base
   solver.mask_fbase(true);

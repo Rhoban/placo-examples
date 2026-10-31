@@ -14,7 +14,7 @@ debug = False
 # How many directions are used
 n_directions = 256
 
-robot = placo.RobotWrapper("../models/spm/")
+robot = placo.RobotWrapper("../models/spm/robot.urdf")
 robot.load_collision_pairs("../models/spm/collision_pairs.json")
 
 solver = placo.KinematicsSolver(robot)

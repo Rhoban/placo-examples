@@ -8,7 +8,7 @@ from placo_utils.visualization import robot_viz
 A differential gear system, demosntrating the use of gear task.
 """
 
-robot = placo.RobotWrapper("../models/differential/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/differential/robot.urdf", placo.Flags.ignore_collisions)
 solver = placo.DynamicsSolver(robot)
 solver.mask_fbase(True)
 

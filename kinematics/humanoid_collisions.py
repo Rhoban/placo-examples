@@ -10,7 +10,7 @@ Sigmaban humanoid is moving its legs while looking at a moving ball.
 """
 
 # Loading the robot
-robot = placo.HumanoidRobot("../models/sigmaban/")
+robot = placo.HumanoidRobot("../models/sigmaban/robot.urdf")
 
 # Placing the left foot in world origin
 robot.set_joint("left_knee", 0.1)

@@ -10,7 +10,7 @@ A quadruped is following tasks that is not physically feasible (mostly flying in
 The puppet contact is used, allowing arbitrary external forces to be added to make the tasks feasible.
 """
 
-robot = placo.RobotWrapper("../models/quadruped/")
+robot = placo.RobotWrapper("../models/quadruped/robot.urdf")
 
 # Putting the robot in a standing position
 robot.update_kinematics()

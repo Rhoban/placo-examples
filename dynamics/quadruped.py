@@ -17,7 +17,7 @@ args_parser = argparse.ArgumentParser()
 args_parser.add_argument("--weight_tangentials", action="store_true")
 args = args_parser.parse_args()
 
-robot = placo.RobotWrapper("../models/quadruped/")
+robot = placo.RobotWrapper("../models/quadruped/robot.urdf")
 
 # Putting the robot in a standing position
 robot.update_kinematics()

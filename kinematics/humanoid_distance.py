@@ -9,7 +9,7 @@ An humanoid robot is moving its right leg, which is constrained to remain at les
 """
 
 # Loading the robot
-robot = placo.HumanoidRobot("../models/sigmaban/")
+robot = placo.HumanoidRobot("../models/sigmaban/robot.urdf")
 
 # Placing the left foot in world origin
 robot.set_T_world_frame("trunk", np.eye(4))

@@ -3,7 +3,7 @@ from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, points_viz, get_viewer
 import placo
 
-robot = placo.RobotWrapper("../models/sigmaban/")
+robot = placo.RobotWrapper("../models/sigmaban/robot.urdf")
 viz = robot_viz(robot)
 
 

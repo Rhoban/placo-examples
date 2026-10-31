@@ -5,7 +5,7 @@ from placo_utils.visualization import robot_viz, robot_frame_viz
 from placo_utils.tf import tf
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/omnidirectional", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/omnidirectional/robot.urdf", placo.Flags.ignore_collisions)
 viz = robot_viz(robot)
 
 # Creating the solver

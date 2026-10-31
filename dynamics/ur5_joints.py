@@ -15,7 +15,7 @@ args_parser.add_argument(
 args = args_parser.parse_args()
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/ur5", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/ur5/robot.urdf", placo.Flags.ignore_collisions)
 robot.set_T_world_frame("base", np.eye(4))
 robot.update_kinematics()
 

@@ -12,7 +12,7 @@ rotate it.
 """
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/6axis/robot.urdf", placo.Flags.ignore_collisions)
 
 # Starting from a bent configuration
 for joint, value in {"r2": 0.4, "r3": 0.8, "r5": 0.6}.items():

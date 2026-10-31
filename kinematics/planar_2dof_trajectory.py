@@ -5,7 +5,7 @@ from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, points_viz, robot_frame_viz, line_viz
 from placo_utils.tf import tf
 
-robot = placo.RobotWrapper("../models/planar-2dof/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/planar-2dof/robot.urdf", placo.Flags.ignore_collisions)
 solver = placo.KinematicsSolver(robot)
 solver.mask_fbase(True)
 

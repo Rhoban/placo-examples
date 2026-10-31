@@ -16,7 +16,7 @@ This demostrates the use of CoM task, orientation task, frame tasks, planar cont
 for initialization. 
 """
 
-robot = placo.RobotWrapper("../models/sigmaban/")
+robot = placo.RobotWrapper("../models/sigmaban/robot.urdf")
 
 robot.update_kinematics()
 

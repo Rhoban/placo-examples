@@ -7,7 +7,7 @@ import placo
 Visualizes a 6-axis robot
 """
 
-robot = placo.RobotWrapper("../models/6axis/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/6axis/robot.urdf", placo.Flags.ignore_collisions)
 viz = robot_viz(robot)
 
 t = 0
