@@ -54,7 +54,7 @@ def loop():
         last_target_t = t
         last_targets.append(target)
         last_targets = last_targets[-50:]
-        points_viz("targets", last_targets, color=0xaaff00)
+        points_viz("targets", last_targets, color=0x33aa00)
 
 
 run_loop()
