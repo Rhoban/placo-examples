@@ -1,4 +1,3 @@
-import pinocchio
 import time
 import placo
 import argparse
@@ -15,7 +14,7 @@ warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument("-p", "--pybullet", action="store_true", help="PyBullet simulation")
-parser.add_argument("-m", "--meshcat", action="store_true", help="MeshCat visualization")
+parser.add_argument("-m", "--viser", action="store_true", help="Viser visualization")
 args = parser.parse_args()
 
 DT = 0.005
@@ -118,8 +117,8 @@ if args.pybullet:
     from onshape_to_robot.simulation import Simulation
 
     sim = Simulation(model_filename, realTime=True, dt=DT)
-elif args.meshcat:
-    # Starting Meshcat viewer
+elif args.viser:
+    # Starting viser viewer
     viz = robot_viz(robot)
     footsteps_viz(trajectory.get_supports())
 else:
@@ -128,7 +127,7 @@ else:
 
 # Timestamps
 start_t = time.time()
-initial_delay = -2.0 if args.pybullet or args.meshcat else 0.0
+initial_delay = -2.0 if args.pybullet or args.viser else 0.0
 t = initial_delay
 last_display = time.time()
 last_replan = 0
@@ -156,7 +155,7 @@ while True:
         # Replanning CoM trajectory, yielding a new trajectory we can switch to
         trajectory = walk.replan(supports, trajectory, t)
 
-        if args.meshcat:
+        if args.viser:
             # Drawing footsteps
             footsteps_viz(supports)
 
@@ -178,8 +177,8 @@ while True:
         applied = sim.setJoints(joints)
         sim.tick()
 
-    # Updating meshcat display periodically
-    elif args.meshcat:
+    # Updating viser display periodically
+    elif args.viser:
         if time.time() - last_display > 0.03:
             last_display = time.time()
             viz.display(robot.state.q)

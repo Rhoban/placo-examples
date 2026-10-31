@@ -1,4 +1,3 @@
-import pinocchio
 import placo
 import time
 import tqdm
@@ -10,7 +9,7 @@ The SPM workspace is estimated. For a set of directions in joint-space, the solv
 increasing distances until a the target is either unreachable or collision occurs.
 """
 
-# Whether to debug (Meshcat viewer)
+# Whether to debug (viser viewer)
 debug = False
 # How many directions are used
 n_directions = 256

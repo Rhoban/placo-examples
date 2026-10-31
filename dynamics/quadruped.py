@@ -1,4 +1,3 @@
-import pinocchio
 import numpy as np
 import placo
 import argparse
