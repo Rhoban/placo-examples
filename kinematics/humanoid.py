@@ -39,6 +39,7 @@ right_foot_task = solver.add_frame_task("right_foot", T_world_right)
 right_foot_task.configure("right_foot", "soft", 1.0, 1.0)
 
 # Look at ball
+ball_radius = 0.05
 look_at_ball = solver.add_axisalign_task(
     "camera", np.array([0.0, 0.0, 1.0]), np.array([0.0, 0.0, 1.0])
 )
@@ -92,8 +93,8 @@ def loop():
     # Updating the com target with lateral sinusoidal trajectory
     com_task.target_world = np.array([0.0, -np.sin(t * np.pi) * 0.05 - 0.05, 0.3])
 
-    # Looking at ball
-    ball = np.array([0.5 + np.cos(t) * 0.25, np.sin(t) * 0.7, 0.0])
+    # Looking at ball (rolling on the ground)
+    ball = np.array([0.5 + np.cos(t) * 0.25, np.sin(t) * 0.7, ball_radius])
     camera_pos = robot.get_T_world_frame("camera")[:3, 3]
     look_at_ball.targetAxis_world = ball - camera_pos
 
@@ -104,7 +105,7 @@ def loop():
     robot_frame_viz(robot, "trunk")
     robot_frame_viz(robot, "camera")
     point_viz("com", robot.com_world(), radius=0.025, color=0xAAAAAA)
-    point_viz("ball", ball, radius=0.05, color=0xDDDDDD)
+    point_viz("ball", ball, radius=ball_radius, color=0xDDDDDD)
 
     t += dt
 
