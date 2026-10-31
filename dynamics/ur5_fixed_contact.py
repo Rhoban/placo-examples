@@ -13,7 +13,7 @@ In this example, an UR5 arm is following a sinusoidal trajectory with a fixed co
 """
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/ur5", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/ur5/robot.urdf", placo.Flags.ignore_collisions)
 robot.update_kinematics()
 robot.set_T_world_frame("base", np.eye(4))
 robot.update_kinematics()

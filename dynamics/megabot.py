@@ -9,7 +9,7 @@ from placo_utils.visualization import (
     contacts_viz,
 )
 
-robot = placo.RobotWrapper("../models/megabot/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/megabot/robot.urdf", placo.Flags.ignore_collisions)
 
 viz = robot_viz(robot)
 

@@ -8,7 +8,7 @@ Example using interpolate_frames and a CubicSpline to produce a smooth trajector
 """
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/6axis/robot.urdf", placo.Flags.ignore_collisions)
 
 # Creating the solver
 solver = placo.KinematicsSolver(robot)

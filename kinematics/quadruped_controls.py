@@ -13,7 +13,7 @@ Quadruped robot whose free leg (leg3) and body targets can be moved from the vie
 - Velocity are constrained to 1 rad/s
 """
 
-robot = placo.RobotWrapper("../models/quadruped", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/quadruped/robot.urdf", placo.Flags.ignore_collisions)
 
 for leg in ["leg1", "leg2", "leg3", "leg4"]:
     robot.set_joint_limits(leg + "_a", -np.pi / 2, np.pi / 2)

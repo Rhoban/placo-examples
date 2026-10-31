@@ -10,7 +10,7 @@ from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
 """
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/6axis/robot.urdf", placo.Flags.ignore_collisions)
 robot.set_joint("r5", 1.0)  # getting out of default singularity
 
 # Creating the solver

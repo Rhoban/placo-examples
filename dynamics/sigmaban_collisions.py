@@ -11,7 +11,7 @@ Tentative example of self collisions avoidance.
 This feature is still quite experimental.
 """
 
-robot = placo.RobotWrapper("../models/sigmaban/")
+robot = placo.RobotWrapper("../models/sigmaban/robot.urdf")
 
 robot.update_kinematics()
 

@@ -11,7 +11,7 @@ Passive degrees of freedom are controlled by a zero-torque task.
 The motor1 joint is controlled by a sinusoidal function.
 """
 
-robot = placo.RobotWrapper("../models/planar-2dof/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/planar-2dof/robot.urdf", placo.Flags.ignore_collisions)
 
 viz = robot_viz(robot)
 

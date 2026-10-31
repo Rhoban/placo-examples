@@ -16,7 +16,7 @@ args_parser.add_argument(
 args = args_parser.parse_args()
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/ur5", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/ur5/robot.urdf", placo.Flags.ignore_collisions)
 
 # Creating the solver
 solver = placo.DynamicsSolver(robot)

@@ -23,7 +23,7 @@ parser.add_argument("-l", "--strong_l2", action="store_true")
 args = parser.parse_args()
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/6axis", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/6axis/robot.urdf", placo.Flags.ignore_collisions)
 
 # Creating the solver
 solver = placo.KinematicsSolver(robot)

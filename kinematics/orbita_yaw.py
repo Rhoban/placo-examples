@@ -9,7 +9,7 @@ Orbita (3 axis rotation with loop closure constraint)
 Controlled with task space (target orientation for the platform)
 """
 
-robot = placo.RobotWrapper("../models/orbita/", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/orbita/robot.urdf", placo.Flags.ignore_collisions)
 robot.set_T_world_fbase(np.eye(4))
 viz = robot_viz(robot)
 

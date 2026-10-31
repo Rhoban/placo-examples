@@ -13,7 +13,7 @@ The robot base is attached to the world, with zero torque in the joints
 An external wrench is applied to the robot's right foot, getting it moving.
 """
 
-robot = placo.RobotWrapper("../models/sigmaban/")
+robot = placo.RobotWrapper("../models/sigmaban/robot.urdf")
 
 robot.update_kinematics()
 

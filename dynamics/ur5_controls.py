@@ -10,7 +10,7 @@ it, and the rings to rotate it.
 """
 
 # Loading the robot
-robot = placo.RobotWrapper("../models/ur5", placo.Flags.ignore_collisions)
+robot = placo.RobotWrapper("../models/ur5/robot.urdf", placo.Flags.ignore_collisions)
 
 # Starting from a bent configuration
 for joint, value in {"shoulder_lift_joint": -1.2, "elbow_joint": 1.5, "wrist_1_joint": -1.8, "wrist_2_joint": -1.57}.items():
