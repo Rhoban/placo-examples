@@ -514,5 +514,16 @@
         20
       ]
     }
+  },
+  "visualization/videos/robot_ghost.mp4": {
+    "example": "visualization/robot_ghost.py",
+    "start": 9.0,
+    "duration": 9.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
   }
 }
