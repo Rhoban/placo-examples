@@ -525,5 +525,50 @@
         20
       ]
     }
+  },
+  "kinematics/videos/6axis_blend.mp4": {
+    "example": "kinematics/6axis_blend.py",
+    "start": 10.0,
+    "duration": 10.0,
+    "sliders": {
+      "alpha": [
+        [
+          0,
+          0
+        ],
+        [
+          1.5,
+          0
+        ],
+        [
+          4.5,
+          1
+        ],
+        [
+          6.5,
+          1
+        ],
+        [
+          9.5,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "panel": true,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ]
+    }
   }
 }
