@@ -236,7 +236,7 @@ class Recorder:
         # Robots: corners of the bounding boxes of their visual geometries
         original_init, original_display = viz.RobotViz.__init__, viz.RobotViz.display
 
-        def init(robot_viz, robot, name):
+        def init(robot_viz, robot, *args, **kwargs):
             robot_viz.corners = []
             for geometry in robot.visual_model.objects:
                 size = np.array(geometry.size, dtype=float)
@@ -255,7 +255,7 @@ class Recorder:
                     lower, upper = mesh.bounds * np.array(geometry.mesh_scale)
                 corners = np.array([[x, y, z, 1.0] for x in [lower[0], upper[0]] for y in [lower[1], upper[1]] for z in [lower[2], upper[2]]])
                 robot_viz.corners.append(corners)
-            original_init(robot_viz, robot, name)
+            original_init(robot_viz, robot, *args, **kwargs)
 
         def display(robot_viz, q):
             if self.measure:
