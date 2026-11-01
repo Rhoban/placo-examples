@@ -1,0 +1,518 @@
+{
+  "kinematics/videos/6axis_basic.mp4": {
+    "example": "kinematics/6axis_basic.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_joint.mp4": {
+    "example": "kinematics/6axis_joint.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_regularization_default.mp4": {
+    "example": "kinematics/6axis_regularization.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_regularization_kinetic.mp4": {
+    "example": "kinematics/6axis_regularization.py",
+    "args": [
+      "--kinetic"
+    ],
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_regularization_posture.mp4": {
+    "example": "kinematics/6axis_regularization.py",
+    "args": [
+      "--posture"
+    ],
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_regularization_strong_l2.mp4": {
+    "example": "kinematics/6axis_regularization.py",
+    "args": [
+      "--strong_l2"
+    ],
+    "start": 31.4159,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_targets.mp4": {
+    "example": "kinematics/6axis_targets.py",
+    "start": 0.0,
+    "duration": 30.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/6axis_trajectory.mp4": {
+    "example": "kinematics/6axis_trajectory.py",
+    "start": 8.0,
+    "duration": 6.2832,
+    "sync": "last_target_t",
+    "camera": {
+      "position": [
+        3.5,
+        -2.3,
+        2.1
+      ],
+      "look_at": [
+        0.85,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "kinematics/videos/differential.mp4": {
+    "example": "kinematics/differential.py",
+    "start": 0.0,
+    "duration": 16.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/humanoid.mp4": {
+    "example": "kinematics/humanoid.py",
+    "start": 12.5664,
+    "duration": 43.9823,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    },
+    "crf": 28
+  },
+  "kinematics/videos/humanoid_collisions.mp4": {
+    "example": "kinematics/humanoid_collisions.py",
+    "start": 12.5664,
+    "duration": 12.5664,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/humanoid_distance.mp4": {
+    "example": "kinematics/humanoid_distance.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/megabot.mp4": {
+    "example": "kinematics/megabot.py",
+    "start": 6.2832,
+    "duration": 3.1416,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/omniwheel.mp4": {
+    "example": "kinematics/omniwheel.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/orbita_joint.mp4": {
+    "example": "kinematics/orbita_joint.py",
+    "start": 4.1888,
+    "duration": 4.1888,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/orbita_task.mp4": {
+    "example": "kinematics/orbita_task.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/orbita_yaw.mp4": {
+    "example": "kinematics/orbita_yaw.py",
+    "start": 31.4159,
+    "duration": 31.4159,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "kinematics/videos/planar_2dof_gear.mp4": {
+    "example": "kinematics/planar_2dof_gear.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -20,
+        15
+      ]
+    }
+  },
+  "kinematics/videos/planar_2dof_joints.mp4": {
+    "example": "kinematics/planar_2dof_joints.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -20,
+        15
+      ]
+    }
+  },
+  "kinematics/videos/planar_2dof_trajectory.mp4": {
+    "example": "kinematics/planar_2dof_trajectory.py",
+    "start": 8.0,
+    "duration": 4.0,
+    "sync": "last_target_t",
+    "camera": {
+      "view": [
+        -20,
+        15
+      ]
+    }
+  },
+  "kinematics/videos/quadruped_targets.mp4": {
+    "example": "kinematics/quadruped_targets.py",
+    "start": 0.0,
+    "duration": 30.0,
+    "gif": [
+      480,
+      15
+    ],
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/differential.mp4": {
+    "example": "dynamics/differential.py",
+    "start": 0.0,
+    "duration": 14.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/megabot.mp4": {
+    "example": "dynamics/megabot.py",
+    "start": 6.2832,
+    "duration": 12.5664,
+    "gif": [
+      480,
+      15
+    ],
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/planar_2dof.mp4": {
+    "example": "dynamics/planar_2dof.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -20,
+        15
+      ]
+    }
+  },
+  "dynamics/videos/quadruped.mp4": {
+    "example": "dynamics/quadruped.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/quadruped_weight_tangentials.mp4": {
+    "example": "dynamics/quadruped.py",
+    "args": [
+      "--weight_tangentials"
+    ],
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/quadruped_hanging.mp4": {
+    "example": "dynamics/quadruped_hanging.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/quadruped_puppet.mp4": {
+    "example": "dynamics/quadruped_puppet.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/sigmaban.mp4": {
+    "example": "dynamics/sigmaban.py",
+    "start": 10.0,
+    "duration": 10.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/sigmaban_external_wrench.mp4": {
+    "example": "dynamics/sigmaban_external_wrench.py",
+    "start": 18.8496,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/ur5_fixed_contact.mp4": {
+    "example": "dynamics/ur5_fixed_contact.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/ur5_joints.mp4": {
+    "example": "dynamics/ur5_joints.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/ur5_targets.mp4": {
+    "example": "dynamics/ur5_targets.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "dynamics/videos/ur5_targets_no_velocity.mp4": {
+    "example": "dynamics/ur5_targets.py",
+    "args": [
+      "--no-velocity"
+    ],
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "robot_wrapper/videos/collisions.mp4": {
+    "example": "robot_wrapper/collisions.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "tools/videos/interpolate_frames.mp4": {
+    "example": "tools/interpolate_frames.py",
+    "start": 4.0,
+    "duration": 4.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "tools/videos/optimal_transformation.mp4": {
+    "example": "tools/optimal_transformation.py",
+    "start": 0.0,
+    "duration": 11.0,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "tools/videos/rotation_from_axis.mp4": {
+    "example": "tools/rotation_from_axis.py",
+    "start": 0.0,
+    "duration": 18.8496,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "visualization/videos/arrow.mp4": {
+    "example": "visualization/arrow.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "visualization/videos/frame.mp4": {
+    "example": "visualization/frame.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "visualization/videos/lines.mp4": {
+    "example": "visualization/lines.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "visualization/videos/point.mp4": {
+    "example": "visualization/point.py",
+    "start": 6.2832,
+    "duration": 6.2832,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "visualization/videos/robot.mp4": {
+    "example": "visualization/robot.py",
+    "start": 18.8496,
+    "duration": 18.8496,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  },
+  "workspace/videos/spm_workspace.mp4": {
+    "example": "workspace/kinematics.py",
+    "start": 4.1888,
+    "duration": 4.1888,
+    "camera": {
+      "view": [
+        -40,
+        20
+      ]
+    }
+  }
+}
