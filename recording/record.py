@@ -19,9 +19,12 @@ Video settings (videos.json):
   placed automatically to see everything that moves during the recording
 - fov: vertical field of view [deg]
 - gif: [width, fps] to also produce a GIF next to the video
+- sliders: keyframes ([time, value], from the start, repeated every duration) moving sliders of the viewer panel
+- panel: true to record the whole page, with the viewer panel (e.g. to see the sliders)
 """
 
 import argparse
+import io
 import json
 import os
 import random
@@ -33,6 +36,7 @@ import types
 
 import imageio_ffmpeg
 import numpy as np
+from PIL import Image
 
 repository = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -96,6 +100,22 @@ class Recorder:
                 raise StopRecording()
 
         self.now = t
+        self.move_sliders()
+
+    def move_sliders(self):
+        """
+        Sets the sliders of the viewer panel from their keyframes ([time, value], linearly interpolated, repeated
+        every duration from the start)
+        """
+        import placo_utils.visualization as viz
+
+        for name, keyframes in self.settings.get("sliders", {}).items():
+            if name in viz.sliders:
+                times, values = np.array(keyframes, dtype=float).T
+                t = (self.now - self.settings.get("start", 0.0)) % self.settings["duration"]
+                value = float(np.interp(t, times, values))
+                if viz.sliders[name].value != value:
+                    viz.sliders[name].value = value
 
     # Rendering
 
@@ -108,7 +128,13 @@ class Recorder:
         if self.client is None:
             self.connect()
 
-        image = self.client.get_render(self.height, self.width, transport_format="jpeg")
+        if self.settings.get("panel"):
+            # Screenshot of the page, with the viewer panel (e.g. to see sliders moving). The render request makes sure
+            # that the browser received the updates of the scene before
+            self.client.get_render(16, 16, transport_format="jpeg")
+            image = np.array(Image.open(io.BytesIO(self.page.screenshot(type="jpeg", quality=95))).convert("RGB"))
+        else:
+            image = self.client.get_render(self.height, self.width, transport_format="jpeg")
         if record:
             self.ffmpeg.stdin.write(np.ascontiguousarray(image).tobytes())
             image = image.astype(np.float32)
@@ -138,6 +164,7 @@ class Recorder:
         executable = os.environ.get("RECORD_CHROMIUM")
         self.browser = self.playwright.chromium.launch(executable_path=executable, args=flags)
         page = self.browser.new_page(viewport={"width": self.width, "height": self.height})
+        self.page = page
         page.goto(f"http://localhost:{server.get_port()}")
         while len(server.get_clients()) == 0:
             time.sleep(0.1)
