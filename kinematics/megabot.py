@@ -23,6 +23,11 @@ for leg in range(1, 5):
 # Initializing the kinematics solver
 solver = placo.KinematicsSolver(robot)
 
+# The loop closures of the legs are independent from each other: the sparse elimination of the hard equalities
+# exploits this structure, and is faster than the default (QR) elimination here, see
+# https://placo.readthedocs.io/en/latest/kinematics/equalities_elimination.html
+solver.problem.sparse_elimination = True
+
 # Adding hard closing loop constraints to match l*_cl*_1 and l*_cl*_2 in the XZ plane
 for leg in range(1, 5):
     for cl in range(1, 5):
