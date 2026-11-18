@@ -2,7 +2,7 @@ import placo
 import time
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, points_viz, robot_frame_viz, line_viz
+from placo_utils.visualization import robot_viz, points_viz, robot_frame_viz, line_viz, get_viewer
 from placo_utils.tf import tf
 
 robot = placo.RobotWrapper("../models/planar-2dof/robot.urdf", placo.Flags.ignore_collisions)
@@ -41,8 +41,9 @@ def loop():
     solver.dump_status()
 
     # Displaying the robot and the effector frame
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
 
 

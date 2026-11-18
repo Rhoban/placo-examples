@@ -7,6 +7,7 @@ from placo_utils.visualization import (
     tf,
     contacts_viz,
     add_plot,
+    get_viewer,
 )
 
 """
@@ -119,13 +120,14 @@ def loop():
         forces_plot.add(plot_t, forces)
 
     # Viewing robot and contacts
-    viz.display(robot.state.q)
-    contacts_viz(solver, ratio=3e-3, radius=0.01)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        contacts_viz(solver, ratio=3e-3, radius=0.01)
 
-    # Viewing the robot's CoM on the ground
-    com = robot.com_world()
-    com[2] = 0.0
-    point_viz("com", com)
+        # Viewing the robot's CoM on the ground
+        com = robot.com_world()
+        com[2] = 0.0
+        point_viz("com", com)
 
 
 run_loop()

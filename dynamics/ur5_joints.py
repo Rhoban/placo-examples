@@ -2,7 +2,7 @@ import placo
 import numpy as np
 import argparse
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, contacts_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, contacts_viz, get_viewer
 
 """
 UR5 arm is following a sinusoidal joint-space trajectory with a fixed contact on the base.
@@ -59,9 +59,10 @@ def loop():
         robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "ee_link")
-    contacts_viz(solver, 2e-3, 0.02)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "ee_link")
+        contacts_viz(solver, 2e-3, 0.02)
 
 
 run_loop()

@@ -2,7 +2,7 @@ import placo
 import numpy as np
 import argparse
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, point_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, point_viz, get_viewer
 
 """
 6axis robot following a 3D position target, to demostrate diferent regularization techniques
@@ -67,9 +67,10 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
-    point_viz("target", effector_task.target_world, radius=0.05)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
+        point_viz("target", effector_task.target_world, radius=0.05)
 
 
 run_loop()

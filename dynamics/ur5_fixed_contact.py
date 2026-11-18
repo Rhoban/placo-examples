@@ -6,6 +6,7 @@ from placo_utils.visualization import (
     robot_viz,
     robot_frame_viz,
     contacts_viz,
+    get_viewer,
 )
 
 """
@@ -58,9 +59,10 @@ def loop():
         robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "ee_link")
-    contacts_viz(solver, 2e-3, 0.02)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "ee_link")
+        contacts_viz(solver, 2e-3, 0.02)
 
 
 run_loop()

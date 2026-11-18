@@ -3,7 +3,7 @@ import placo
 import argparse
 from ischedule import schedule, run_loop
 from placo_utils.tf import tf
-from placo_utils.visualization import robot_viz, contacts_viz
+from placo_utils.visualization import robot_viz, contacts_viz, get_viewer
 
 """
 In this example, a quadruped is placed on the floor with four unilateral contact points.
@@ -74,8 +74,9 @@ def loop():
         solver.solve(True)
         robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    contacts_viz(solver)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        contacts_viz(solver)
 
 
 run_loop()

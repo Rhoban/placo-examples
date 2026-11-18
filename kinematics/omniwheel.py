@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, get_viewer
 from placo_utils.tf import tf
 
 # Loading the robot
@@ -32,8 +32,9 @@ def loop():
 
     solver.solve(True)
     robot.update_kinematics()
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "base")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "base")
 
 
 run_loop()

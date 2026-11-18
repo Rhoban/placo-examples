@@ -2,7 +2,7 @@ import time
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 from placo_utils.tf import tf
 
 """
@@ -85,9 +85,10 @@ def loop():
     solver.solve(True)
     robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "left_foot")
-    frame_viz("left_foot_target", left_foot_task.T_world_frame, opacity=0.25)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "left_foot")
+        frame_viz("left_foot_target", left_foot_task.T_world_frame, opacity=0.25)
 
     t += dt
 

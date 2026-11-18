@@ -1,7 +1,7 @@
 import placo
 import time
 import numpy as np
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 
 """
 Orbita (3 axis rotation with loop closure constraint)
@@ -49,8 +49,9 @@ while True:
     solver.dump_status()
 
     # Displaying
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
     t += dt
     time.sleep(dt)

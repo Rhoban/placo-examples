@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz
+from placo_utils.visualization import robot_viz, get_viewer
 
 """
 6axis robot moving to target configurations, shown as a transparent "ghost" of the robot
@@ -47,11 +47,12 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, and the ghost in the target configuration
-    viz.display(robot.state.q)
-    q_target = robot.state.q.copy()
-    for i, value in enumerate(target):
-        q_target[robot.get_joint_offset(f"r{i + 1}")] = value
-    target_viz.display(q_target)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        q_target = robot.state.q.copy()
+        for i, value in enumerate(target):
+            q_target[robot.get_joint_offset(f"r{i + 1}")] = value
+        target_viz.display(q_target)
 
 
 run_loop()

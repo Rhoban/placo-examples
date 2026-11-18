@@ -1,4 +1,4 @@
-from placo_utils.visualization import robot_viz, robot_frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, get_viewer
 from ischedule import schedule, run_loop
 import numpy as np
 import placo
@@ -26,9 +26,10 @@ def loop():
     robot.update_kinematics()
 
     # Showing effector frame
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        robot_frame_viz(robot, "effector")
 
-    # Updating the viewer
-    viz.display(robot.state.q)
+        # Updating the viewer
+        viz.display(robot.state.q)
 
 run_loop()

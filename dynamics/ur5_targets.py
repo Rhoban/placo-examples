@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 from ischedule import schedule, run_loop
 from placo_utils.tf import tf
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 
 """
 UR5 following a given trajectory, basic example for the dynamics solver.
@@ -72,9 +72,10 @@ def loop():
         robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "ee_link")
-    frame_viz("target", effector_task.T_world_frame)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "ee_link")
+        frame_viz("target", effector_task.T_world_frame)
 
 
 run_loop()

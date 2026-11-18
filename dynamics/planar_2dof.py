@@ -1,7 +1,7 @@
 import numpy as np
 from ischedule import schedule, run_loop
 import placo
-from placo_utils.visualization import robot_viz, robot_frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, get_viewer
 
 """
 In this example, a planar 2dof parallel robot is controlled with the dynamics solver.
@@ -55,8 +55,9 @@ def loop():
         solver.solve(True)
         robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
 
 run_loop()

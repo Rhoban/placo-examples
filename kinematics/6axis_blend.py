@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, add_slider
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, add_slider, get_viewer
 
 """
 6axis robot with two tasks: a joints task (a given configuration, shown as a ghost of the robot) and a frame task
@@ -57,10 +57,11 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, the joints task target (ghost) and the frame task target
-    viz.display(robot.state.q)
-    ghost_viz.display(q_joints)
-    frame_viz("effector_target", effector_task.T_world_frame)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        ghost_viz.display(q_joints)
+        frame_viz("effector_target", effector_task.T_world_frame)
+        robot_frame_viz(robot, "effector")
 
 
 run_loop()

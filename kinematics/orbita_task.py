@@ -1,7 +1,7 @@
 import placo
 import time
 import numpy as np
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 from placo_utils.tf import tf
 
 """
@@ -53,9 +53,10 @@ while True:
     solver.dump_status()
 
     # Displaying
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
-    robot_frame_viz(robot, "base")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
+        robot_frame_viz(robot, "base")
 
     t += dt
     time.sleep(dt)

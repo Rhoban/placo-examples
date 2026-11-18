@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, get_viewer
 
 """
 6axis robot, using a joint task to move r1
@@ -37,8 +37,9 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
 
 run_loop()

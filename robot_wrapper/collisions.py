@@ -27,15 +27,16 @@ def loop():
     for collision in collisions:
         print("- Collision betweek " + collision.bodyA + " and " + collision.bodyB)
 
-    # Displaying the collisions
-    points_viz(
-        "collisions",
-        np.array([collision.get_contact(0) for collision in collisions]),
-        color=0xFF0000,
-    )
+    with get_viewer().atomic():
+        # Displaying the collisions
+        points_viz(
+            "collisions",
+            np.array([collision.get_contact(0) for collision in collisions]),
+            color=0xFF0000,
+        )
 
-    # Displaying the robot
-    viz.display(robot.state.q)
+        # Displaying the robot
+        viz.display(robot.state.q)
 
 
 run_loop()
