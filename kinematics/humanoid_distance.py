@@ -2,7 +2,7 @@ import time
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 
 """
 An humanoid robot is moving its right leg, which is constrained to remain at less than 30cm from the trunk.
@@ -65,10 +65,11 @@ def loop():
     solver.dump_status()
     robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "trunk")
-    robot_frame_viz(robot, "right_foot")
-    frame_viz("target", right_foot_task.T_world_frame, 0.5)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "trunk")
+        robot_frame_viz(robot, "right_foot")
+        frame_viz("target", right_foot_task.T_world_frame, 0.5)
 
     t += dt
 

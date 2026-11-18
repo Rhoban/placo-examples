@@ -1,6 +1,6 @@
 import placo
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, joints_sliders
+from placo_utils.visualization import robot_viz, robot_frame_viz, joints_sliders, get_viewer
 
 """
 6axis robot whose joints are controlled directly with sliders in the viewer (forward kinematics, no solver)
@@ -23,8 +23,9 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot and effector
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
 
 run_loop()

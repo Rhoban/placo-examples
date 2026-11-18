@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, task_controls
+from placo_utils.visualization import robot_viz, robot_frame_viz, task_controls, get_viewer
 
 """
 6axis robot whose effector target can be moved from the viewer: drag the arrows to move it, and the rings to
@@ -42,8 +42,9 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot and effector
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
 
 run_loop()

@@ -6,6 +6,7 @@ from placo_utils.visualization import (
     robot_viz,
     robot_frame_viz,
     frame_viz,
+    get_viewer,
 )
 
 robot = placo.RobotWrapper("../models/megabot/robot.urdf", placo.Flags.ignore_collisions)
@@ -88,9 +89,10 @@ def loop():
     robot.update_kinematics()
 
     # Displaying
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "base")
-    frame_viz("base_target", T, 0.5)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "base")
+        frame_viz("base_target", T, 0.5)
 
 
 run_loop()

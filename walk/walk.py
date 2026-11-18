@@ -8,6 +8,7 @@ from placo_utils.visualization import (
     frame_viz,
     line_viz,
     footsteps_viz,
+    get_viewer,
 )
 
 warnings.filterwarnings("ignore")
@@ -181,15 +182,16 @@ while True:
     elif args.viser:
         if time.time() - last_display > 0.03:
             last_display = time.time()
-            viz.display(robot.state.q)
+            with get_viewer().atomic():
+                viz.display(robot.state.q)
 
-            frame_viz("left_foot_target", trajectory.get_T_world_left(t))
-            frame_viz("right_foot_target", trajectory.get_T_world_right(t))
+                frame_viz("left_foot_target", trajectory.get_T_world_left(t))
+                frame_viz("right_foot_target", trajectory.get_T_world_right(t))
 
-            T_world_trunk = np.eye(4)
-            T_world_trunk[:3, :3] = trajectory.get_R_world_trunk(t)
-            T_world_trunk[:3, 3] = trajectory.get_p_world_CoM(t)
-            frame_viz("trunk_target", T_world_trunk)
+                T_world_trunk = np.eye(4)
+                T_world_trunk[:3, :3] = trajectory.get_R_world_trunk(t)
+                T_world_trunk[:3, 3] = trajectory.get_p_world_CoM(t)
+                frame_viz("trunk_target", T_world_trunk)
 
     # Spin-lock until the next tick
     t += DT

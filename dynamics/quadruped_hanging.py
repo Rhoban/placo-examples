@@ -5,6 +5,7 @@ from placo_utils.tf import tf
 from placo_utils.visualization import (
     robot_viz,
     contacts_viz,
+    get_viewer,
 )
 
 """
@@ -72,8 +73,9 @@ def loop():
         solver.solve(True)
         robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    contacts_viz(solver)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        contacts_viz(solver)
 
 
 run_loop()

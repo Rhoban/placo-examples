@@ -2,7 +2,7 @@ import numpy as np
 import placo
 from ischedule import schedule, run_loop
 from placo_utils.tf import tf
-from placo_utils.visualization import robot_viz, contacts_viz
+from placo_utils.visualization import robot_viz, contacts_viz, get_viewer
 
 """
 A quadruped is following tasks that is not physically feasible (mostly flying in the air).
@@ -68,8 +68,9 @@ def loop():
         solver.solve(True)
         robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    contacts_viz(solver)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        contacts_viz(solver)
 
 
 run_loop()

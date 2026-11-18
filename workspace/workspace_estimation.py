@@ -2,7 +2,7 @@ import placo
 import time
 import tqdm
 import numpy as np
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz, get_viewer
 
 """
 The SPM workspace is estimated. For a set of directions in joint-space, the solver is invoked with
@@ -55,8 +55,9 @@ def find_highest_distance(direction, max_distance=2):
             robot.update_kinematics()
 
         if debug:
-            robot_frame_viz(robot, "effector")
-            viz.display(robot.state.q)
+            with get_viewer().atomic():
+                robot_frame_viz(robot, "effector")
+                viz.display(robot.state.q)
 
         collisions = robot.self_collisions(False)
         points_viz(

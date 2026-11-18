@@ -4,6 +4,7 @@ import placo
 from placo_utils.visualization import (
     robot_viz,
     contacts_viz,
+    get_viewer,
 )
 
 """
@@ -51,8 +52,9 @@ def loop():
         solver.solve(True)
 
     # Viewing robot and contacts
-    viz.display(robot.state.q)
-    contacts_viz(solver, ratio=1e-2, radius=0.01)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        contacts_viz(solver, ratio=1e-2, radius=0.01)
 
 
 run_loop()

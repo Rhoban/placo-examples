@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, get_viewer
 
 """
 6axis robot reaching random targets.
@@ -60,9 +60,10 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
-    frame_viz("target", effector_task.T_world_frame)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
+        frame_viz("target", effector_task.T_world_frame)
 
 
 run_loop()

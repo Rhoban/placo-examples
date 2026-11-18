@@ -2,7 +2,7 @@ import placo
 import time
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, points_viz, robot_frame_viz, line_viz
+from placo_utils.visualization import robot_viz, points_viz, robot_frame_viz, line_viz, get_viewer
 from placo_utils.tf import tf
 
 robot = placo.RobotWrapper("../models/planar-2dof/robot.urdf", placo.Flags.ignore_collisions)
@@ -50,18 +50,19 @@ def loop():
     solver.solve(True)
 
     # Displaying the robot and the effector frame
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
 
-    # Drawing the last 50 targets (adding one point every 100ms)
-    if t - last_target_t > 0.1:
-        last_target_t = t
-        last_targets.append(target)
-        last_targets = last_targets[-20:]
-        lines = []
-        for i in range(len(last_targets) - 1):
-            lines += [last_targets[i], last_targets[i+1]]
-        line_viz("targets", np.array(lines), color=0xaaff00)
+        # Drawing the last 50 targets (adding one point every 100ms)
+        if t - last_target_t > 0.1:
+            last_target_t = t
+            last_targets.append(target)
+            last_targets = last_targets[-20:]
+            lines = []
+            for i in range(len(last_targets) - 1):
+                lines += [last_targets[i], last_targets[i+1]]
+            line_viz("targets", np.array(lines), color=0xaaff00)
 
 
 

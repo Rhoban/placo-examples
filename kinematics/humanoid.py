@@ -2,7 +2,7 @@ import time
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, point_viz, robot_frame_viz
+from placo_utils.visualization import robot_viz, point_viz, robot_frame_viz, get_viewer
 
 """
 Sigmaban humanoid is moving its legs while looking at a moving ball.
@@ -101,11 +101,12 @@ def loop():
     solver.solve(True)
     robot.update_kinematics()
 
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "trunk")
-    robot_frame_viz(robot, "camera")
-    point_viz("com", robot.com_world(), radius=0.025, color=0xAAAAAA)
-    point_viz("ball", ball, radius=ball_radius, color=0xDDDDDD)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "trunk")
+        robot_frame_viz(robot, "camera")
+        point_viz("com", robot.com_world(), radius=0.025, color=0xAAAAAA)
+        point_viz("ball", ball, radius=ball_radius, color=0xDDDDDD)
 
     t += dt
 

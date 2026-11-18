@@ -1,7 +1,7 @@
 import placo
 import numpy as np
 from ischedule import schedule, run_loop
-from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz
+from placo_utils.visualization import robot_viz, robot_frame_viz, frame_viz, points_viz, get_viewer
 from placo_utils.tf import tf
 
 """
@@ -45,16 +45,17 @@ def loop():
     robot.update_kinematics()
 
     # Displaying the robot, effector and target
-    viz.display(robot.state.q)
-    robot_frame_viz(robot, "effector")
-    frame_viz("target", effector_task.T_world_frame)
+    with get_viewer().atomic():
+        viz.display(robot.state.q)
+        robot_frame_viz(robot, "effector")
+        frame_viz("target", effector_task.T_world_frame)
 
-    # Drawing the last 50 targets (adding one point every 100ms)
-    if t - last_target_t > 0.1:
-        last_target_t = t
-        last_targets.append(target)
-        last_targets = last_targets[-50:]
-        points_viz("targets", last_targets, color=0x33aa00)
+        # Drawing the last 50 targets (adding one point every 100ms)
+        if t - last_target_t > 0.1:
+            last_target_t = t
+            last_targets.append(target)
+            last_targets = last_targets[-50:]
+            points_viz("targets", last_targets, color=0x33aa00)
 
 
 run_loop()
